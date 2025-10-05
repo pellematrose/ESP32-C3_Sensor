@@ -1841,7 +1841,7 @@
 		(uuid "fb3f9585-43cf-4766-83cb-212f02d6ef7a")
 	)
 	(hierarchical_label "PT100_1"
-		(shape bidirectional)
+		(shape output)
 		(at 96.52 38.1 0)
 		(effects
 			(font
@@ -1852,7 +1852,7 @@
 		(uuid "2846f99d-0968-492f-847e-c60846dbeaf3")
 	)
 	(hierarchical_label "SHDN1"
-		(shape bidirectional)
+		(shape input)
 		(at 80.01 29.21 90)
 		(effects
 			(font
@@ -1863,7 +1863,7 @@
 		(uuid "2e891b13-4eb6-4a74-8df9-a0f074718cc8")
 	)
 	(hierarchical_label "SHDN2"
-		(shape bidirectional)
+		(shape input)
 		(at 80.01 74.93 90)
 		(effects
 			(font
@@ -1874,7 +1874,7 @@
 		(uuid "3f10814f-69e2-45b5-9411-c96d3a5abdb3")
 	)
 	(hierarchical_label "PT100_2"
-		(shape bidirectional)
+		(shape output)
 		(at 96.52 83.82 0)
 		(effects
 			(font
