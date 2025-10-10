@@ -1869,6 +1869,147 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:AP2127N3-1.2"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AP2127N3-1.2"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2127.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 1.2V fixed positive output, SOT-23-3 package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TSOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AP2127N3-1.2_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AP2127N3-1.2_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Resistor_E12_0603:Resistor 100K"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3456,6 +3597,16 @@
 		)
 		(uuid "219f9536-3388-4805-936b-6f3d0aa672cc")
 	)
+	(text "Vape Battery: 37x17mm\n"
+		(exclude_from_sim no)
+		(at 178.308 123.698 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a7d40d75-a47c-4785-b177-61eda5b9369d")
+	)
 	(junction
 		(at 102.87 38.1)
 		(diameter 0)
@@ -3491,6 +3642,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1f98023f-b8df-406c-bbc2-67d405c5bb66")
+	)
+	(junction
+		(at 220.98 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "39698480-ecb2-4f83-bafa-07a06c0dcbe6")
 	)
 	(junction
 		(at 113.03 154.94)
@@ -3589,6 +3746,16 @@
 			(type default)
 		)
 		(uuid "064b87d3-d939-43c5-87e3-73416204d066")
+	)
+	(wire
+		(pts
+			(xy 209.55 48.26) (xy 209.55 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08ce5099-2a48-453a-8651-e5c351e370cc")
 	)
 	(wire
 		(pts
@@ -4032,6 +4199,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 38.1) (xy 220.98 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "971f11c9-468e-40fa-abea-1eec30d5a627")
+	)
+	(wire
+		(pts
 			(xy 67.31 45.72) (xy 54.61 45.72)
 		)
 		(stroke
@@ -4262,6 +4439,26 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 38.1) (xy 220.98 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e220338b-8cbe-445d-8085-4b75b319a8c8")
+	)
+	(wire
+		(pts
+			(xy 220.98 38.1) (xy 217.17 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e224539a-5542-44e0-ba6d-c25e0a347a72")
+	)
+	(wire
+		(pts
 			(xy 59.69 50.8) (xy 59.69 53.34)
 		)
 		(stroke
@@ -4339,6 +4536,16 @@
 			(type default)
 		)
 		(uuid "f47f5ce2-2e3a-4a61-b25a-1370b6cf56a9")
+	)
+	(wire
+		(pts
+			(xy 195.58 38.1) (xy 201.93 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4d75ccf-8d90-4420-8075-ad860d1a2278")
 	)
 	(wire
 		(pts
@@ -5772,6 +5979,229 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:AP2127N3-1.2")
+		(at 209.55 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "35030200-3feb-4144-b242-7b9a7dd14070")
+		(property "Reference" "U7"
+			(at 209.55 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XC6206P182MR"
+			(at 209.55 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+			(at 209.55 32.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C347373.pdf"
+			(at 209.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "250mA low dropout linear regulator,  2.5V-6V input voltage, 1.8V fixed positive output, SOT-23-3 package"
+			(at 209.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 209.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C347373"
+			(at 209.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "0c05064f-11be-4225-b666-61a16ea13a77")
+		)
+		(pin "2"
+			(uuid "01a8b19a-7a11-499b-b296-b310713a8b4a")
+		)
+		(pin "1"
+			(uuid "26874ec3-ae8e-4964-b8fd-ced2c2faa470")
+		)
+		(instances
+			(project ""
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 223.52 38.1 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3932c2d6-395a-41dd-9998-920815a632dd")
+		(property "Reference" "#PWR039"
+			(at 219.71 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1.8V"
+			(at 227.33 38.0999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 223.52 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1de354f5-97de-46b5-b226-b386d90e0a39")
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 220.98 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3b7023b3-862c-43c5-a29d-658974d368c0")
+		(property "Reference" "#PWR040"
+			(at 220.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 220.98 51.054 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.98 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.98 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 220.98 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c19b760a-9890-4f8a-a0b3-14f3d45ec550")
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 115.57 35.56 0)
 		(unit 1)
@@ -5866,7 +6296,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1-2-3.81_1x02_P3.81mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 180.34 130.81 0)
 			(effects
 				(font
@@ -6340,6 +6770,76 @@
 			(project "ESP32-C3_Dev"
 				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
 					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "_PS_LIB:C_0603")
+		(at 220.98 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "582e60f7-0459-4e23-95fd-7585f95b37ba")
+		(property "Reference" "C14"
+			(at 224.79 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 224.79 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 221.9452 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 220.98 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "94f14ebc-a879-4d19-a20a-3f34d33b1d03")
+		)
+		(pin "2"
+			(uuid "45bcca45-ebc8-4f29-84d3-889cee5c5679")
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -6913,6 +7413,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 209.55 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "83478658-d6ff-42ac-9819-e743070458e6")
+		(property "Reference" "#PWR031"
+			(at 209.55 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 209.55 51.054 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 209.55 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 209.55 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fcd88cd4-5338-4616-b00e-07829ff9ba16")
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Resistor_E12_0603:Resistor 100R")
 		(at 152.4 130.81 270)
 		(mirror x)
@@ -7050,6 +7616,73 @@
 			(project "ESP32-C3_Dev"
 				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
 					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 195.58 38.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8cc53fc5-3785-48d0-8636-7d5b5dc759dc")
+		(property "Reference" "#PWR030"
+			(at 199.39 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 191.77 38.0999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.58 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 195.58 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "172b03c2-421c-4358-9f25-a159129a2e79")
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
