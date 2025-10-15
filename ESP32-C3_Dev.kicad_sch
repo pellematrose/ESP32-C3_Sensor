@@ -5,6 +5,12 @@
 	(uuid "db6fe335-723a-49f3-91f7-1db51b82a15a")
 	(paper "A4")
 	(lib_symbols)
+	(junction
+		(at 143.51 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c1ae656d-0d99-4b1e-beef-5c831908fdae")
+	)
 	(wire
 		(pts
 			(xy 135.89 82.55) (xy 147.32 82.55)
@@ -17,13 +23,23 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 80.01) (xy 147.32 80.01)
+			(xy 135.89 80.01) (xy 143.51 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "20b3a4b7-fcbe-4d53-b7cb-1f6efadcc1ce")
+	)
+	(wire
+		(pts
+			(xy 135.89 67.31) (xy 143.51 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6030f4ad-12ec-4478-a12e-2af02914e67f")
 	)
 	(wire
 		(pts
@@ -34,6 +50,16 @@
 			(type default)
 		)
 		(uuid "652a5452-cd76-49a6-b534-a22449893ce3")
+	)
+	(wire
+		(pts
+			(xy 143.51 67.31) (xy 143.51 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67d3e6d4-fa54-4704-8097-8f8bc0ff6469")
 	)
 	(wire
 		(pts
@@ -84,6 +110,16 @@
 			(type default)
 		)
 		(uuid "d7d27c51-5599-45ed-8ccf-14bee837d0f1")
+	)
+	(wire
+		(pts
+			(xy 143.51 80.01) (xy 147.32 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd06e434-6084-4600-b73a-c7052ae4a3d0")
 	)
 	(wire
 		(pts
@@ -261,7 +297,7 @@
 				(justify left top)
 			)
 		)
-		(pin "PT100_1" bidirectional
+		(pin "PT100_1" output
 			(at 135.89 77.47 0)
 			(uuid "76eb42ed-31f8-4e3f-b146-8a57c1254f4b")
 			(effects
@@ -271,7 +307,7 @@
 				(justify right)
 			)
 		)
-		(pin "SHDN1" bidirectional
+		(pin "SHDN1" input
 			(at 135.89 80.01 0)
 			(uuid "67d202fd-6191-43e0-bd51-3571afd737dd")
 			(effects
@@ -281,7 +317,7 @@
 				(justify right)
 			)
 		)
-		(pin "PT100_2" bidirectional
+		(pin "PT100_2" output
 			(at 135.89 82.55 0)
 			(uuid "368a50b9-115f-4390-8fb5-3de687913631")
 			(effects
@@ -291,7 +327,7 @@
 				(justify right)
 			)
 		)
-		(pin "SHDN2" bidirectional
+		(pin "SHDN2" input
 			(at 135.89 85.09 0)
 			(uuid "a6fe6b22-8afc-4973-ada7-a149a91b8029")
 			(effects
@@ -311,7 +347,7 @@
 	)
 	(sheet
 		(at 107.95 52.07)
-		(size 27.94 15.24)
+		(size 27.94 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -335,7 +371,7 @@
 			)
 		)
 		(property "Sheetfile" "powersupply.kicad_sch"
-			(at 107.95 67.8946 0)
+			(at 107.95 69.1646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -394,6 +430,16 @@
 		(pin "UBAT" output
 			(at 135.89 64.77 0)
 			(uuid "66dfd12c-1de0-4c38-9471-e45dd9ea8725")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SHDN1" input
+			(at 135.89 67.31 0)
+			(uuid "5c4c3828-dbe6-4772-bffb-62b7264eb266")
 			(effects
 				(font
 					(size 1.27 1.27)

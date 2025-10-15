@@ -2389,7 +2389,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 95.25) (xy 203.2 95.25)
+			(xy 199.39 95.25) (xy 203.2 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2499,7 +2499,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 69.85) (xy 203.2 69.85)
+			(xy 199.39 69.85) (xy 203.2 69.85)
 		)
 		(stroke
 			(width 0)
@@ -3381,16 +3381,6 @@
 		)
 		(uuid "cea27c85-f2dc-4b92-96cd-d0df8f210374")
 	)
-	(label "GPIO10"
-		(at 186.69 95.25 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cf43d77d-8a4c-4c27-bf9a-e9a9ef7247bb")
-	)
 	(label "I2C_SDA"
 		(at 242.57 67.31 0)
 		(effects
@@ -3401,19 +3391,9 @@
 		)
 		(uuid "f3a5e789-f9e6-4e21-83e1-0f95506e32c1")
 	)
-	(label "GPIO0"
-		(at 186.69 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f6456e1c-7e94-4b43-8a3b-4f2ca128577a")
-	)
 	(hierarchical_label "PT100_1"
 		(shape input)
-		(at 199.39 82.55 180)
+		(at 199.39 72.39 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3435,7 +3415,7 @@
 	)
 	(hierarchical_label "PT100_2"
 		(shape input)
-		(at 199.39 80.01 180)
+		(at 199.39 74.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3446,7 +3426,7 @@
 	)
 	(hierarchical_label "READY"
 		(shape input)
-		(at 199.39 74.93 180)
+		(at 199.39 69.85 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3479,7 +3459,7 @@
 	)
 	(hierarchical_label "CHARGING"
 		(shape input)
-		(at 199.39 72.39 180)
+		(at 199.39 95.25 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3929,7 +3909,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 186.69 69.85 90)
+		(at 199.39 80.01 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -3938,15 +3918,16 @@
 		(fields_autoplaced yes)
 		(uuid "319f702f-3e6f-42b5-a0b7-ea5aafbc1169")
 		(property "Reference" "TP1"
-			(at 183.388 67.31 90)
+			(at 194.31 80.0099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 183.388 74.93 90)
+			(at 196.088 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3955,7 +3936,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 186.69 64.77 0)
+			(at 199.39 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3964,7 +3945,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 186.69 64.77 0)
+			(at 199.39 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3973,7 +3954,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 186.69 69.85 0)
+			(at 199.39 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3982,7 +3963,7 @@
 			)
 		)
 		(property "Characteristics" ""
-			(at 186.69 69.85 0)
+			(at 199.39 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3991,7 +3972,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 186.69 69.85 0)
+			(at 199.39 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4404,6 +4385,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 158.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C720477"
+			(at 158.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9078ee0c-3760-4bfc-9f1e-a8f020ae2de8")
 		)
@@ -4540,6 +4539,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 264.16 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
+			(at 264.16 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "380e15aa-a704-4af0-ac82-c017f68effea")
 		)
@@ -4668,6 +4685,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 198.12 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 198.12 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
 			(at 198.12 57.15 0)
 			(effects
 				(font
@@ -4814,6 +4849,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 170.18 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C720477"
+			(at 170.18 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b9fd45f-2cc0-4830-aa5b-5b98a3e6d67e")
 		)
@@ -4876,6 +4929,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 182.88 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 182.88 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
 			(at 182.88 90.17 0)
 			(effects
 				(font
@@ -4967,7 +5038,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 186.69 95.25 90)
+		(at 199.39 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -4976,7 +5047,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f918b42-833e-4598-9235-19368b6cc0ca")
 		(property "Reference" "TP2"
-			(at 181.61 95.2499 90)
+			(at 194.31 82.5499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4985,7 +5056,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 183.388 100.33 90)
+			(at 196.088 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4994,7 +5065,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 186.69 90.17 0)
+			(at 199.39 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5003,7 +5074,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 186.69 90.17 0)
+			(at 199.39 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5012,7 +5083,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 186.69 95.25 0)
+			(at 199.39 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5021,7 +5092,7 @@
 			)
 		)
 		(property "Characteristics" ""
-			(at 186.69 95.25 0)
+			(at 199.39 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5030,7 +5101,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 186.69 95.25 0)
+			(at 199.39 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5097,6 +5168,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 135.89 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C431786"
 			(at 135.89 88.9 0)
 			(effects
 				(font
@@ -5889,7 +5978,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C965807"
 			(at 135.89 97.79 0)
 			(effects
 				(font
@@ -5960,6 +6049,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 254 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 254 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
 			(at 254 58.42 0)
 			(effects
 				(font
@@ -6047,7 +6154,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2934560"
 			(at 218.44 82.55 0)
 			(effects
 				(font
@@ -6207,7 +6314,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10u 10V"
 			(at 227.33 48.2599 0)
 			(effects
 				(font
@@ -6235,6 +6342,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 223.52 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 223.52 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2959727"
 			(at 223.52 46.99 0)
 			(effects
 				(font

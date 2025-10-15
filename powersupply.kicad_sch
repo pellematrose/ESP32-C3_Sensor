@@ -460,119 +460,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Capacitor_E12_0603:Capacitor_820n"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 1.016 -2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "820n"
-				(at 1.524 2.032 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Capacitor 0603 50V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Capacitor_820n_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Capacitor_820n_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:Conn_01x02_Pin"
 			(pin_names
 				(offset 1.016)
@@ -1869,7 +1756,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:AP2127N3-1.2"
+		(symbol "Regulator_Linear:LP2985-1.8"
 			(pin_names
 				(offset 0.254)
 			)
@@ -1877,15 +1764,15 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -3.81 3.175 0)
+				(at -6.35 5.715 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "AP2127N3-1.2"
-				(at 0 3.175 0)
+			(property "Value" "LP2985-1.8"
+				(at 0 5.715 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1893,17 +1780,16 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
-				(at 0 5.715 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2127.pdf"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lp2985.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1912,7 +1798,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 1.2V fixed positive output, SOT-23-3 package"
+			(property "Description" "150mA 16V Low-noise Low-dropout Regulator With Shutdown, 1.8V output voltage, SOT-23-5"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1921,7 +1807,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "linear regulator ldo fixed positive"
+			(property "ki_keywords" "LDO regulator linear  SOT-23-5"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1930,7 +1816,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TSOT?23*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1939,10 +1825,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "AP2127N3-1.2_0_1"
+			(symbol "LP2985-1.8_0_1"
 				(rectangle
-					(start -5.08 1.905)
-					(end 5.08 -5.08)
+					(start -7.62 -5.08)
+					(end 7.62 4.445)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1952,11 +1838,29 @@
 					)
 				)
 			)
-			(symbol "AP2127N3-1.2_1_1"
+			(symbol "LP2985-1.8_1_1"
 				(pin power_in line
-					(at -7.62 0 0)
+					(at -10.16 2.54 0)
 					(length 2.54)
-					(name "VI"
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "ON/~{OFF}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1981,7 +1885,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1990,16 +1894,34 @@
 					)
 				)
 				(pin power_out line
-					(at 7.62 0 180)
+					(at 10.16 2.54 180)
 					(length 2.54)
-					(name "VO"
+					(name "VOUT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "BP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3644,7 +3566,7 @@
 		(uuid "1f98023f-b8df-406c-bbc2-67d405c5bb66")
 	)
 	(junction
-		(at 220.98 38.1)
+		(at 227.33 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "39698480-ecb2-4f83-bafa-07a06c0dcbe6")
@@ -3749,7 +3671,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 48.26) (xy 209.55 45.72)
+			(xy 213.36 50.8) (xy 213.36 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4199,7 +4121,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 38.1) (xy 220.98 40.64)
+			(xy 227.33 38.1) (xy 227.33 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4266,6 +4188,16 @@
 			(type default)
 		)
 		(uuid "ac6371f3-30d6-4ad5-8a21-36d9fb66d22a")
+	)
+	(wire
+		(pts
+			(xy 200.66 40.64) (xy 203.2 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6b6e6e2-52ce-43b1-bf8a-b259c78aeaab")
 	)
 	(wire
 		(pts
@@ -4439,7 +4371,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 38.1) (xy 220.98 38.1)
+			(xy 229.87 38.1) (xy 227.33 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4449,7 +4381,7 @@
 	)
 	(wire
 		(pts
-			(xy 220.98 38.1) (xy 217.17 38.1)
+			(xy 227.33 38.1) (xy 223.52 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4539,7 +4471,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 38.1) (xy 201.93 38.1)
+			(xy 196.85 38.1) (xy 203.2 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4649,6 +4581,17 @@
 			(justify left)
 		)
 		(uuid "55d87933-6a7f-4adb-a66c-6806de546388")
+	)
+	(hierarchical_label "SHDN1"
+		(shape input)
+		(at 200.66 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "64da6ce7-db8b-4749-abb9-e53222cae7b2")
 	)
 	(hierarchical_label "READY"
 		(shape output)
@@ -5166,7 +5109,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2988369"
 			(at 39.37 53.34 0)
 			(effects
 				(font
@@ -5302,6 +5245,94 @@
 		)
 	)
 	(symbol
+		(lib_id "_PS_LIB:C_0603")
+		(at 86.36 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "141ae646-cb5f-4f2c-b60c-19fb7e2f2e50")
+		(property "Reference" "C17"
+			(at 90.17 143.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u 10V"
+			(at 90.17 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 87.3252 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 86.36 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 86.36 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2959727"
+			(at 86.36 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b89af5f-6471-426d-9b1c-73d05c62430c")
+		)
+		(pin "2"
+			(uuid "66655c10-2561-479d-bb52-553106cd7d61")
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 86.36 156.21 0)
 		(mirror y)
@@ -5413,6 +5444,24 @@
 			)
 		)
 		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 132.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 132.08 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C347222"
 			(at 132.08 38.1 0)
 			(effects
 				(font
@@ -5979,98 +6028,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:AP2127N3-1.2")
-		(at 209.55 38.1 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "35030200-3feb-4144-b242-7b9a7dd14070")
-		(property "Reference" "U7"
-			(at 209.55 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "XC6206P182MR"
-			(at 209.55 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
-			(at 209.55 32.385 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C347373.pdf"
-			(at 209.55 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "250mA low dropout linear regulator,  2.5V-6V input voltage, 1.8V fixed positive output, SOT-23-3 package"
-			(at 209.55 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Characteristics" ""
-			(at 209.55 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C347373"
-			(at 209.55 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "0c05064f-11be-4225-b666-61a16ea13a77")
-		)
-		(pin "2"
-			(uuid "01a8b19a-7a11-499b-b296-b310713a8b4a")
-		)
-		(pin "1"
-			(uuid "26874ec3-ae8e-4964-b8fd-ced2c2faa470")
-		)
-		(instances
-			(project ""
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
-		(at 223.52 38.1 270)
+		(at 229.87 38.1 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6079,7 +6038,7 @@
 		(fields_autoplaced yes)
 		(uuid "3932c2d6-395a-41dd-9998-920815a632dd")
 		(property "Reference" "#PWR039"
-			(at 219.71 38.1 0)
+			(at 226.06 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6088,7 +6047,7 @@
 			)
 		)
 		(property "Value" "+1.8V"
-			(at 227.33 38.0999 90)
+			(at 233.68 38.0999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6097,7 +6056,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 223.52 38.1 0)
+			(at 229.87 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6106,7 +6065,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 223.52 38.1 0)
+			(at 229.87 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6115,7 +6074,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 223.52 38.1 0)
+			(at 229.87 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6137,7 +6096,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 220.98 48.26 0)
+		(at 227.33 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6145,7 +6104,7 @@
 		(dnp no)
 		(uuid "3b7023b3-862c-43c5-a29d-658974d368c0")
 		(property "Reference" "#PWR040"
-			(at 220.98 54.61 0)
+			(at 227.33 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6154,7 +6113,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 220.98 51.054 90)
+			(at 227.33 51.054 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6163,7 +6122,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 220.98 48.26 0)
+			(at 227.33 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6172,7 +6131,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.98 48.26 0)
+			(at 227.33 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6181,7 +6140,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 220.98 48.26 0)
+			(at 227.33 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6690,6 +6649,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 107.95 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2939001"
+			(at 107.95 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2d330c5b-0009-4045-a8ae-2d9073fbcf24")
 		)
@@ -6760,6 +6737,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 86.36 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2939001"
+			(at 86.36 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "63c60484-2528-48fd-948a-242b39bfd7b4")
 		)
@@ -6777,7 +6772,7 @@
 	)
 	(symbol
 		(lib_id "_PS_LIB:C_0603")
-		(at 220.98 44.45 0)
+		(at 227.33 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6786,7 +6781,7 @@
 		(fields_autoplaced yes)
 		(uuid "582e60f7-0459-4e23-95fd-7585f95b37ba")
 		(property "Reference" "C14"
-			(at 224.79 43.1799 0)
+			(at 231.14 43.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6795,7 +6790,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 224.79 45.7199 0)
+			(at 231.14 45.7199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6804,7 +6799,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 221.9452 48.26 0)
+			(at 228.2952 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6813,7 +6808,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 220.98 44.45 0)
+			(at 227.33 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6822,7 +6817,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 220.98 44.45 0)
+			(at 227.33 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7098,6 +7093,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 80.01 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C383211"
+			(at 80.01 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "75c1bd9b-a91b-46fd-9065-f644a8bf9c51")
 		)
@@ -7165,6 +7178,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 71.12 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C431786"
+			(at 71.12 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "be2edd56-5d19-4a91-8cba-f898452c19ee")
 		)
@@ -7224,6 +7255,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 71.12 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 71.12 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C431786"
 			(at 71.12 43.18 0)
 			(effects
 				(font
@@ -7414,7 +7463,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 209.55 48.26 0)
+		(at 213.36 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7422,7 +7471,7 @@
 		(dnp no)
 		(uuid "83478658-d6ff-42ac-9819-e743070458e6")
 		(property "Reference" "#PWR031"
-			(at 209.55 54.61 0)
+			(at 213.36 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7431,7 +7480,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 209.55 51.054 90)
+			(at 213.36 53.594 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7440,7 +7489,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 209.55 48.26 0)
+			(at 213.36 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7449,7 +7498,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 209.55 48.26 0)
+			(at 213.36 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7458,7 +7507,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 209.55 48.26 0)
+			(at 213.36 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7623,7 +7672,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 195.58 38.1 90)
+		(at 196.85 38.1 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7632,7 +7681,7 @@
 		(fields_autoplaced yes)
 		(uuid "8cc53fc5-3785-48d0-8636-7d5b5dc759dc")
 		(property "Reference" "#PWR030"
-			(at 199.39 38.1 0)
+			(at 200.66 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7641,7 +7690,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 191.77 38.0999 90)
+			(at 193.04 38.0999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7650,7 +7699,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 195.58 38.1 0)
+			(at 196.85 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7659,7 +7708,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 38.1 0)
+			(at 196.85 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7668,7 +7717,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 195.58 38.1 0)
+			(at 196.85 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7835,6 +7884,101 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:LP2985-1.8")
+		(at 213.36 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "932087ed-0424-4082-bf39-1b234fea86c2")
+		(property "Reference" "U9"
+			(at 213.36 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XC6220B181MR"
+			(at 213.36 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 213.36 32.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C22466447.pdf"
+			(at 213.36 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "150mA 16V Low-noise Low-dropout Regulator With Shutdown, 1.8V output voltage, SOT-23-5"
+			(at 213.36 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 213.36 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C22466447"
+			(at 213.36 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89e78155-69b4-4e9b-9f42-f30441fa67a8")
+		)
+		(pin "3"
+			(uuid "79ac849f-dbce-4a4f-a05e-e391b63ee33f")
+		)
+		(pin "2"
+			(uuid "9fb9cdd1-52d2-4cff-a5b5-c41efaa93a35")
+		)
+		(pin "5"
+			(uuid "83241f46-aff9-4988-93f7-ad2e0b5fe99e")
+		)
+		(pin "4"
+			(uuid "313a0817-3958-478c-a5f2-3c21c56d5f18")
+		)
+		(instances
+			(project ""
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
+					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "_PS_LIB:R_0603")
 		(at 167.64 38.1 90)
 		(unit 1)
@@ -7879,6 +8023,24 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 167.64 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 167.64 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C431786"
 			(at 167.64 38.1 0)
 			(effects
 				(font
@@ -8046,7 +8208,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C965799"
 			(at 172.72 45.72 0)
 			(effects
 				(font
@@ -8065,94 +8227,6 @@
 			(project "ESP32-C3_Dev"
 				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
 					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Capacitor_E12_0603:Capacitor_820n")
-		(at 86.36 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9eb92431-457c-4172-a20e-d111b6a2d463")
-		(property "Reference" "C13"
-			(at 90.17 143.5099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4u7"
-			(at 90.17 146.0499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 86.36 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Capacitor 0603 50V"
-			(at 86.36 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Characteristics" ""
-			(at 86.36 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 86.36 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "99c458a2-c3ba-41f7-9a60-ea35d8540652")
-		)
-		(pin "1"
-			(uuid "f3ac8ea2-1a88-4931-a6f8-a2a47014d4c7")
-		)
-		(instances
-			(project "ESP32-C3_Dev"
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
-					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -8270,6 +8344,24 @@
 			)
 		)
 		(property "Description" "ESD Protection Diode, SOD-523"
+			(at 102.87 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 102.87 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C383211"
 			(at 102.87 60.96 0)
 			(effects
 				(font
@@ -8951,7 +9043,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10u 10V"
 			(at 149.86 46.9899 0)
 			(effects
 				(font
@@ -8979,6 +9071,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 146.05 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 146.05 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2959727"
 			(at 146.05 45.72 0)
 			(effects
 				(font
@@ -9057,6 +9167,24 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" ""
+			(at 59.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C383211"
+			(at 59.69 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "53ec0533-a11c-4196-8957-02a9f6928aed")
 		)
@@ -9091,7 +9219,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10u 10V"
 			(at 119.38 62.2299 0)
 			(effects
 				(font
@@ -9119,6 +9247,24 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 115.57 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" ""
+			(at 115.57 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2959727"
 			(at 115.57 60.96 0)
 			(effects
 				(font
