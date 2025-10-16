@@ -4560,6 +4560,17 @@
 		)
 		(uuid "07da3c32-78b2-4015-b907-a1c326856852")
 	)
+	(hierarchical_label "SHDNLDO"
+		(shape input)
+		(at 200.66 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0f351217-8553-4658-9412-fb9107e6d5ba")
+	)
 	(hierarchical_label "UBAT"
 		(shape output)
 		(at 100.33 147.32 0)
@@ -4581,17 +4592,6 @@
 			(justify left)
 		)
 		(uuid "55d87933-6a7f-4adb-a66c-6806de546388")
-	)
-	(hierarchical_label "SHDN1"
-		(shape input)
-		(at 200.66 40.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "64da6ce7-db8b-4749-abb9-e53222cae7b2")
 	)
 	(hierarchical_label "READY"
 		(shape output)
