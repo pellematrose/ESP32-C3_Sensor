@@ -15480,7 +15480,7 @@
 	(footprint "kibuzzard-68E98378"
 		(layer "F.Cu")
 		(uuid "d8234ed9-5239-48ef-b1de-11ac9c037e60")
-		(at 155.391151 79.715915)
+		(at 155.71 79.5)
 		(descr "Generated with KiBuzzard")
 		(tags "kb_params=eyJBbGlnbm1lbnRDaG9pY2UiOiAiQ2VudGVyIiwgIkNhcExlZnRDaG9pY2UiOiAiWyIsICJDYXBSaWdodENob2ljZSI6ICJdIiwgIkZvbnRDb21ib0JveCI6ICJVYnVudHVNb25vLUIiLCAiSGVpZ2h0Q3RybCI6IDEuNSwgIkxheWVyQ29tYm9Cb3giOiAiRi5TaWxrUyIsICJMaW5lU3BhY2luZ0N0cmwiOiAxLjUsICJNdWx0aUxpbmVUZXh0IjogIitcclxuK1xyXG4tIiwgIlBhZGRpbmdCb3R0b21DdHJsIjogMi4wLCAiUGFkZGluZ0xlZnRDdHJsIjogMi4wLCAiUGFkZGluZ1JpZ2h0Q3RybCI6IDIuMCwgIlBhZGRpbmdUb3BDdHJsIjogMi4wLCAiV2lkdGhDdHJsIjogMC4wLCAiYWR2YW5jZWRDaGVja2JveCI6IGZhbHNlLCAiaW5saW5lRm9ybWF0VGV4dGJveCI6IGZhbHNlLCAibGluZW92ZXJTdHlsZUNob2ljZSI6ICJTcXVhcmUiLCAibGluZW92ZXJUaGlja25lc3NDdHJsIjogMX0=")
 		(property "Reference" "kibuzzard-68E98378"
@@ -21743,7 +21743,7 @@
 	(footprint "kibuzzard-68EE7E42"
 		(layer "B.Cu")
 		(uuid "80dafcde-86b0-4246-af51-d99b7ec757ce")
-		(at 155.5 79.5 180)
+		(at 155.71 79.5 180)
 		(descr "Generated with KiBuzzard")
 		(tags "kb_params=eyJBbGlnbm1lbnRDaG9pY2UiOiAiQ2VudGVyIiwgIkNhcExlZnRDaG9pY2UiOiAiWyIsICJDYXBSaWdodENob2ljZSI6ICJdIiwgIkZvbnRDb21ib0JveCI6ICJVYnVudHVNb25vLUIiLCAiSGVpZ2h0Q3RybCI6IDEuNSwgIkxheWVyQ29tYm9Cb3giOiAiRi5TaWxrUyIsICJMaW5lU3BhY2luZ0N0cmwiOiAxLjUsICJNdWx0aUxpbmVUZXh0IjogIi1cclxuK1xyXG4rIiwgIlBhZGRpbmdCb3R0b21DdHJsIjogMi4wLCAiUGFkZGluZ0xlZnRDdHJsIjogMi4wLCAiUGFkZGluZ1JpZ2h0Q3RybCI6IDIuMCwgIlBhZGRpbmdUb3BDdHJsIjogMi4wLCAiV2lkdGhDdHJsIjogMC4wLCAiYWR2YW5jZWRDaGVja2JveCI6IGZhbHNlLCAiaW5saW5lRm9ybWF0VGV4dGJveCI6IGZhbHNlLCAibGluZW92ZXJTdHlsZUNob2ljZSI6ICJTcXVhcmUiLCAibGluZW92ZXJUaGlja25lc3NDdHJsIjogMX0=")
 		(property "Reference" "kibuzzard-68EE7E42"
