@@ -4096,7 +4096,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 69.85) (xy 115.57 64.77)
+			(xy 115.57 69.85) (xy 115.57 57.15)
 		)
 		(stroke
 			(width 0)
@@ -4156,7 +4156,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 38.1) (xy 115.57 57.15)
+			(xy 115.57 38.1) (xy 115.57 49.53)
 		)
 		(stroke
 			(width 0)
@@ -4256,7 +4256,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 137.16) (xy 101.6 123.19)
+			(xy 101.6 137.16) (xy 101.6 121.92)
 		)
 		(stroke
 			(width 0)
@@ -4336,7 +4336,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 123.19) (xy 157.48 130.81)
+			(xy 157.48 121.92) (xy 157.48 130.81)
 		)
 		(stroke
 			(width 0)
@@ -4716,7 +4716,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 123.19) (xy 157.48 123.19)
+			(xy 101.6 121.92) (xy 157.48 121.92)
 		)
 		(stroke
 			(width 0)
@@ -6852,7 +6852,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "484895a4-0c47-4992-ab29-dc3e61e9366c")
 		(property "Reference" "R19"
@@ -9209,7 +9209,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d97a5ab6-7f7d-4102-bcb4-be15ecbf3dd5")
 		(property "Reference" "R18"
@@ -9671,7 +9671,7 @@
 	)
 	(symbol
 		(lib_id "_PS_LIB:C_0603")
-		(at 115.57 60.96 0)
+		(at 115.57 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9680,7 +9680,7 @@
 		(fields_autoplaced yes)
 		(uuid "f73a8b74-20a4-4794-9807-c4a57adfb49b")
 		(property "Reference" "C1"
-			(at 119.38 59.6899 0)
+			(at 119.38 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9689,7 +9689,7 @@
 			)
 		)
 		(property "Value" "10u 10V"
-			(at 119.38 62.2299 0)
+			(at 119.38 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9698,7 +9698,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 116.5352 64.77 0)
+			(at 116.5352 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9707,7 +9707,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 115.57 60.96 0)
+			(at 115.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9716,7 +9716,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 115.57 60.96 0)
+			(at 115.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9725,7 +9725,7 @@
 			)
 		)
 		(property "Characteristics" ""
-			(at 115.57 60.96 0)
+			(at 115.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9734,7 +9734,7 @@
 			)
 		)
 		(property "LCSC" "C2959727"
-			(at 115.57 60.96 0)
+			(at 115.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
