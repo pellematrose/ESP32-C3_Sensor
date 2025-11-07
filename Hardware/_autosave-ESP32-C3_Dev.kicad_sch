@@ -1,0 +1,418 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "db6fe335-723a-49f3-91f7-1db51b82a15a")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 135.89 82.55) (xy 147.32 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "089cc817-2cc3-4e53-b6a7-6996fff83154")
+	)
+	(wire
+		(pts
+			(xy 135.89 67.31) (xy 147.32 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6030f4ad-12ec-4478-a12e-2af02914e67f")
+	)
+	(wire
+		(pts
+			(xy 135.89 54.61) (xy 147.32 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "652a5452-cd76-49a6-b534-a22449893ce3")
+	)
+	(wire
+		(pts
+			(xy 135.89 64.77) (xy 147.32 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77de34e5-b33b-4727-ab59-a81dd00e2506")
+	)
+	(wire
+		(pts
+			(xy 135.89 59.69) (xy 147.32 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82a28017-981d-4d90-8c24-3c5651ff346b")
+	)
+	(wire
+		(pts
+			(xy 135.89 57.15) (xy 147.32 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bdf220d-ab80-4d60-b3d0-91c840bfe8c1")
+	)
+	(wire
+		(pts
+			(xy 135.89 77.47) (xy 147.32 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aac1a21c-5f08-4be0-a0df-3164bd8815eb")
+	)
+	(wire
+		(pts
+			(xy 135.89 80.01) (xy 147.32 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd06e434-6084-4600-b73a-c7052ae4a3d0")
+	)
+	(wire
+		(pts
+			(xy 135.89 62.23) (xy 147.32 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7299a51-b05e-404a-87b3-76afed2d8398")
+	)
+	(sheet
+		(at 147.32 52.07)
+		(size 26.67 36.83)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 35 102 220 1.0000)
+		)
+		(uuid "91c554b6-9438-44a2-99d9-22b509dc076e")
+		(property "Sheetname" "Controller"
+			(at 147.32 51.3584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "controller.kicad_sch"
+			(at 147.32 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "USB+" bidirectional
+			(at 147.32 54.61 180)
+			(uuid "eb33a510-88ff-472d-8db2-4770823c7686")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB-" bidirectional
+			(at 147.32 57.15 180)
+			(uuid "94de3459-51cd-4853-88ef-821b0a0180b7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SHDN1" output
+			(at 147.32 80.01 180)
+			(uuid "b61fd815-d5e4-4573-9be8-b11a36e71908")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PT100_1" input
+			(at 147.32 77.47 180)
+			(uuid "8f9f42fb-e8f3-454d-8828-888956f34a74")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PT100_2" input
+			(at 147.32 82.55 180)
+			(uuid "2fbdd268-25e2-428e-8062-bcb1968b748c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "READY" input
+			(at 147.32 62.23 180)
+			(uuid "7a7a16f0-5968-4327-817b-7838d21c863e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CHARGING" input
+			(at 147.32 59.69 180)
+			(uuid "d140dc8b-af0d-4632-82e6-5ba879ef79ad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "UBAT" input
+			(at 147.32 64.77 180)
+			(uuid "d6a1499e-4cbc-4a1e-b683-2418781f5fbb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SHDNLDO" output
+			(at 147.32 67.31 180)
+			(uuid "db3ba167-f75d-40e0-ab58-12e0a82c1cf5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 107.95 74.93)
+		(size 27.94 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 41 167 45 1.0000)
+		)
+		(uuid "c68a59f4-2b07-4029-ac41-36681080e557")
+		(property "Sheetname" "PT100"
+			(at 107.95 74.2184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pt100.kicad_sch"
+			(at 107.95 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PT100_1" output
+			(at 135.89 77.47 0)
+			(uuid "76eb42ed-31f8-4e3f-b146-8a57c1254f4b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SHDN1" input
+			(at 135.89 80.01 0)
+			(uuid "67d202fd-6191-43e0-bd51-3571afd737dd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PT100_2" output
+			(at 135.89 82.55 0)
+			(uuid "368a50b9-115f-4390-8fb5-3de687913631")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 107.95 52.07)
+		(size 27.94 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 233 1 42 1.0000)
+		)
+		(uuid "d9928072-ea8a-49f1-b3c8-e0aa18923ae3")
+		(property "Sheetname" "Power Supply"
+			(at 107.95 51.3584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "powersupply.kicad_sch"
+			(at 107.95 69.1646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Field2" ""
+			(at 107.95 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "USB+" bidirectional
+			(at 135.89 54.61 0)
+			(uuid "cf280b75-6c2f-48ef-9450-3d8a4acc766e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB-" bidirectional
+			(at 135.89 57.15 0)
+			(uuid "1d0555e7-d494-4b64-b36d-e85d83952506")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CHARGING" output
+			(at 135.89 59.69 0)
+			(uuid "db019290-c25d-4b8b-87db-bdf898b4a160")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "READY" output
+			(at 135.89 62.23 0)
+			(uuid "1b0275d7-0d70-45ce-92fe-d6bfe340f0e0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UBAT" output
+			(at 135.89 64.77 0)
+			(uuid "66dfd12c-1de0-4c38-9471-e45dd9ea8725")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SHDNLDO" input
+			(at 135.89 67.31 0)
+			(uuid "284d4f2b-2baf-45ae-8b61-c331c868eff2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "ESP32-C3_Dev"
+				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
