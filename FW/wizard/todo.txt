@@ -1,0 +1,13 @@
+Todo list:
+- OLED einkommentieren
+	- gui basteln
+- MQTT komplett implementieren
+- Temperatur
+	- averaging
+	- 1min auf oled anzeigen
+	- 15min durchschnitt -> mqtt
+- Deepsleep?
+	- nur bei Batterie nötig.
+	- no bat erkennen und kein deepsleep?
+- Calibration
+	- beim ersten start "reset calibration" drücken, um Kalibrierung zu enablen
