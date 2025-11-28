@@ -4,6 +4,13 @@
 extern PubSubClient client; 
 extern WiFiClient thermoClient; 
 
+
+struct Cred {
+  char ssid[25];
+  char pass[25];
+};
+extern Cred c;
+
 struct md {
   bool en;
   char broker[50];

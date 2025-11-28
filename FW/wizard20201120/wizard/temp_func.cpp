@@ -100,3 +100,7 @@ float moving_average(float dat[], int len){
   }
   return sum/len;
 }
+
+void fill_array(float){
+  
+}

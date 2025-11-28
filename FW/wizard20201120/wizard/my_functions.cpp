@@ -9,7 +9,6 @@ uint32_t voltages_cal[] = {0,0,0,0};  // {Sensor 1 CAL Low, Sensor 1 CAL High, S
 float zero_cal[] = {0, 0};  // {Sensor 1 Temp 0°C, Sensor 2 Temp 0°C} -> Saves the offset to 0°C. 
 bool encalch1 = 0;
 bool encalch2 = 0;
-uint32_t vol = 0;
 
 void load(int addr, void *buf, size_t len){
   uint8_t *p = (uint8_t *) buf;
@@ -25,10 +24,6 @@ void save(int addr, const void *buf, size_t len){
 }
 
 void my_get_battery(struct battery *data) {
-  vol = get_voltage(3) * 2; // 100k - 100k voltage divider
-  bool chrg = get_charge_Pin();
-  bool rdy = get_ready_Pin();
-
   float per   = ((float)vol - 2400.0f) / 1800.0f * 100.0f; // 0% at 2.4V 100% at 4.2V
   data->percent = (int)per;
   data->voltage = vol; 

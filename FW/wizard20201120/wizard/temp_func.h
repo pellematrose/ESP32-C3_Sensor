@@ -10,3 +10,4 @@ float get_temperature(uint8_t adc_channel);//esp_adc_cal_characteristics_t* adc_
 uint32_t get_voltage(uint8_t adc_channel);
 uint32_t get_adc_mean(uint8_t adc_channel);
 float moving_average(float dat[], int len);
+void fill_array(float);

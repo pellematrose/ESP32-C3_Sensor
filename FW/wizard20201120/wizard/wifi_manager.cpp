@@ -9,12 +9,7 @@
 const char *ssidap = "Thermometer";
 const char *passwordap = "123456789";
 
-struct Cred {
-  char ssid[25];
-  char pass[25];
-};
-Cred c;
-
+struct Cred c;
 struct md mqttdata;
 
 uint32_t mqtt_counter = 0;

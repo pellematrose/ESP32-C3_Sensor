@@ -18,6 +18,7 @@
 #include <Adafruit_Sensor.h>
 #include "Adafruit_BMP3XX.h"
 #include "WiFi.h"
+#include "io_func.h"
 
 #define ADC_CHANNEL1 ADC1_CHANNEL_1  // GPIO1
 #define ADC_CHANNEL2 ADC1_CHANNEL_2  // GPIO2
@@ -40,6 +41,9 @@ Adafruit_BMP3XX bmp;
 float temp1 = 0;
 float temp2 = 0;
 float pressure = 0;
+uint32_t vol = 0;
+bool chrg = 0;
+bool rdy = 0;
 float temp1_15min[15];
 float temp2_15min[15];
 float pressure_15min[15];
@@ -52,8 +56,8 @@ uint8_t count = 0;
 uint32_t now = 0;
 uint32_t last1min = 0;
 uint32_t last15min = 0;
-uint32_t delta1min = 1000;  // TODO
-uint32_t delta15min = 15000;//15000;// TODO
+uint32_t delta1min = 60000;  // TODO
+uint32_t delta15min = 900000;//15000;// TODO
 
 void setup() {
   Serial.begin(115200);
@@ -95,6 +99,26 @@ void setup() {
   connect_wifi();
   mqtt_setup();
   
+  // fill arrays with real values
+  // TODO: put in own function
+  if (! bmp.performReading()) {
+  Serial.println("Failed to perform reading :(");
+  return;
+  }
+  for(int i=0; i<15; i++){
+    temp1_15min[i] = get_temperature(1) - zero_cal[0];
+    temp2_15min[i] = get_temperature(2) - zero_cal[1];
+    pressure_15min[i] = bmp.pressure / 100;
+  }
+  temp1_15minavg = moving_average(temp1_15min, 15);
+  temp2_15minavg = moving_average(temp2_15min, 15);
+  pressure_15minavg = moving_average(pressure_15min, 15);
+  vol = get_voltage(3) * 2; // 100k : 100k voltage divider
+  chrg = get_charge_Pin();
+  rdy = get_ready_Pin();
+  oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
+  // fill array function end
+
   //esp_sleep_enable_timer_wakeup(900000000);
 
   mongoose_init();
@@ -126,12 +150,11 @@ void loop() {
     mqtt_loop();
   }
   
-
   // time loop one
   if(now - last1min > delta1min){
     last1min = now;
 
-    temp1 = get_temperature(1) - zero_cal[0];//&adc_chars);
+    temp1 = get_temperature(1) - zero_cal[0];
     temp2 = get_temperature(2) - zero_cal[1];
     
     if (! bmp.performReading()) {
@@ -148,12 +171,17 @@ void loop() {
     temp1_15minavg = moving_average(temp1_15min, 15);
     temp2_15minavg = moving_average(temp2_15min, 15);
     pressure_15minavg = moving_average(pressure_15min, 15);
+    //TODO: read battery voltage and charge status
+    vol = get_voltage(3) * 2; // 100k : 100k voltage divider
+    chrg = get_charge_Pin();
+    rdy = get_ready_Pin();
 
-    Serial.printf("Temperature: %.1f°C, %.1f°C, %.1fhPa\n", temp1_15minavg, temp2_15minavg, pressure_15minavg);
+    Serial.printf("%.1f°C, %.1f°C, %.1fhPa, %dmV\n", temp1_15minavg, temp2_15minavg, pressure_15minavg, vol);
     
-    oled_temp(temp1_15minavg, temp2_15minavg, pressure_15minavg);
+    oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
   }
 
+  // time loop two
   if(now - last15min > delta15min){
     last15min = now;
       // mqtt
@@ -161,11 +189,18 @@ void loop() {
       mqtt_publish();
     }
   }
+  
+  // display battery voltage at button press
+  if(get_buttonboot_Pin()==0){
+    oled_auxdata(vol);
+    delay(1000);
+    oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
+  }
   /*
   if(digitalRead(buttonboot)==0){
-    digitalWrite(ledPin,0);
+    
   }else{
-    digitalWrite(ledPin, 1);
+
   }*/
 }
 
