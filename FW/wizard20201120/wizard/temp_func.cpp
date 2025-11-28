@@ -92,3 +92,11 @@ uint32_t get_adc_mean(uint8_t adc_channel){
 
   return adc_reading;
 }
+
+float moving_average(float dat[], int len){
+  float sum = 0;
+  for(int i=0; i<len; i++){
+    sum += dat[i];
+  }
+  return sum/len;
+}

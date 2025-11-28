@@ -110,7 +110,7 @@ void glue_start_btnlow(struct mg_str params) {
   s_action_timeout_btnlow = mg_now() + 1000; // Start btnlow, finish after 1 second
 }
 
-static struct temperature s_temperature = {0, 0};
+static struct temperature s_temperature = {0, 0, 0};
 void glue_get_temperature(struct temperature *data) {
   *data = s_temperature;  // Sync with your device
 }

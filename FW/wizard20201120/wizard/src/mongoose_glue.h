@@ -142,6 +142,7 @@ void glue_start_btnlow(struct mg_str);  // Start an action
 bool glue_check_btnlow(void);  // Check if action is still in progress
 
 struct temperature {
+  double press;
   double temp1;
   double temp2;
 };

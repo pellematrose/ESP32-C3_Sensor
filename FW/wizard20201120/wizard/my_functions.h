@@ -41,6 +41,9 @@ bool my_check_tempoffset2(void);
 void my_start_tempoffset2(struct mg_str params);
 bool my_check_resetcal2(void);
 void my_start_resetcal2(struct mg_str params);
+
+bool my_check_reboot(void);
+void my_start_reboot(struct mg_str params);
 #ifdef __cplusplus
 }
 #endif

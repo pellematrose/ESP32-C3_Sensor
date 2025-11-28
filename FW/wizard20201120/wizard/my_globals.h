@@ -25,6 +25,11 @@ extern const int buttonbootPin;
 extern const int chargingPin;
 extern float temp1;
 extern float temp2;
+extern float pressure;
+extern float temp1_15minavg;
+extern float temp2_15minavg;
+extern float pressure_15minavg;
+extern uint32_t vol;
 
 const uint32_t voltages[] = {164, 427, 1178};       // used for old interpolation function calc_temp()
 const float temperatures[] = {-12.77, 1.28, 39.38}; // used for old interpolation function calc_temp()
@@ -35,5 +40,4 @@ extern float zero_cal[2];
 
 const int numPoints = sizeof(voltages) / sizeof(voltages[0]);
 
-
-
+extern bool apmode; // 0 = AP, 1 = STA

@@ -75,6 +75,7 @@
       "read_level": 0, 
       "write_level": 0, 
       "attributes": {
+        "press": {"type": "double", "value": 0, "format": "%.1f"}, 
         "temp1": {"type": "double", "value": 0, "format": "%.1f"}, 
         "temp2": {"type": "double", "value": 0, "format": "%.1f"}
       }
@@ -156,7 +157,8 @@
                     ]},
                   {"classes": "container", "css": "justify-content: center;\nalign-items: start;\nflex-direction: column;\ngap: 0.5rem;\nflex-wrap: wrap;", "layout": [
                       {"format": "Temperature 1: ${temperature.temp1}°C"},
-                      {"format": "Temperature 2: ${temperature.temp2}°C"}
+                      {"format": "Temperature 2: ${temperature.temp2}°C"},
+                      {"format": "Pressure: ${temperature.press}hPa", "css": "height: 1.25rem;"}
                     ]}
                 ]}
             ]},

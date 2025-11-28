@@ -14,6 +14,10 @@
 #include "wifi_manager.h"
 #include <U8g2lib.h>
 #include "oled_gui.h"
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include "Adafruit_BMP3XX.h"
+#include "WiFi.h"
 
 #define ADC_CHANNEL1 ADC1_CHANNEL_1  // GPIO1
 #define ADC_CHANNEL2 ADC1_CHANNEL_2  // GPIO2
@@ -23,38 +27,40 @@
 // ADC
 esp_adc_cal_characteristics_t adc_chars;
 
-// OLED
-//U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE, /* clock=*/ 20, /* data=*/ 21);   // ESP32 Thing, HW I2C with pin remapping
+// I2C
+TwoWire myWire = TwoWire(0);
 
+// OLED
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE, /* clock=*/ 20, /* data=*/ 21);   // ESP32 Thing, HW I2C with pin remapping
+
+// BMP388
+Adafruit_BMP3XX bmp;
 
 // variables
 float temp1 = 0;
 float temp2 = 0;
+float pressure = 0;
 float temp1_15min[15];
 float temp2_15min[15];
+float pressure_15min[15];
 float temp1_15minavg = 0;
 float temp2_15minavg = 0;
+float pressure_15minavg = 0;
 uint8_t count = 0;
 
 // - timing
 uint32_t now = 0;
 uint32_t last1min = 0;
 uint32_t last15min = 0;
-uint32_t delta1min = 1000;
-uint32_t delta15min = 15000;
+uint32_t delta1min = 1000;  // TODO
+uint32_t delta15min = 15000;//15000;// TODO
 
 void setup() {
   Serial.begin(115200);
-  //while (!Serial) delay(50);
   delay(100);
-  //Serial.setTxTimeoutMs(0);  // avoid blocking if serial not present
 
   // pin definitions
   setup_pins();
-
-  // OLED
-  //u8g2.begin();
-  //u8g2.enableUTF8Print();
   
   // Legacy ADC konfigurieren
   adc1_config_width(ADC_WIDTH_BIT_12);
@@ -68,11 +74,28 @@ void setup() {
   load(CAL_ADDRESS, (void *)voltages_cal, sizeof(voltages_cal));
   load(ZERO_ADDRESS, (void *)zero_cal, sizeof(zero_cal));
 
+  myWire.begin(21, 20, 400000); // SDA, SCL, Freq
+  if(!bmp.begin_I2C(0x76, &myWire)){
+    Serial.println("BMP Error.");
+  }
+  // OLED
+  u8g2.begin();
+  u8g2.enableUTF8Print();
+
+  // Set up oversampling and filter initialization
+  bmp.setTemperatureOversampling(BMP3_OVERSAMPLING_8X);
+  bmp.setPressureOversampling(BMP3_OVERSAMPLING_4X);
+  bmp.setIIRFilterCoeff(BMP3_IIR_FILTER_COEFF_3);
+  bmp.setOutputDataRate(BMP3_ODR_50_HZ);
+
   // Set logging function to serial print
   mg_log_set_fn([](char ch, void *) { Serial.print(ch); }, NULL);
   mg_log_set(MG_LL_DEBUG);
 
   connect_wifi();
+  mqtt_setup();
+  
+  //esp_sleep_enable_timer_wakeup(900000000);
 
   mongoose_init();
   mongoose_set_http_handlers("battery", my_get_battery, my_set_battery);
@@ -89,6 +112,7 @@ void setup() {
   mongoose_set_http_handlers("resetcal2", my_check_resetcal2, my_start_resetcal2);
   mongoose_set_http_handlers("tempoffset1", my_check_tempoffset1, my_start_tempoffset1);
   mongoose_set_http_handlers("tempoffset2", my_check_tempoffset2, my_start_tempoffset2);
+  mongoose_set_http_handlers("reboot", my_check_reboot, my_start_reboot);
 
 }
 
@@ -97,29 +121,46 @@ void loop() {
 
   now = millis();
 
+  // mqtt
+  if(mqttdata.en == true){
+    mqtt_loop();
+  }
+  
+
   // time loop one
   if(now - last1min > delta1min){
     last1min = now;
 
     temp1 = get_temperature(1) - zero_cal[0];//&adc_chars);
     temp2 = get_temperature(2) - zero_cal[1];
-    Serial.printf("Temperature: %.1f°C, %.1f°C\n", temp1, temp2);
+    
+    if (! bmp.performReading()) {
+      Serial.println("Failed to perform reading :(");
+      return;
+    }
+    pressure = bmp.pressure / 100;
     
     if(count == 15) count = 0; // reset counter when at end of array
     temp1_15min[count] = temp1;
     temp2_15min[count] = temp2;
+    pressure_15min[count] = pressure;
     count++;
-    temp1_15minavg /= 15;
-    temp2_15minavg /= 15;
+    temp1_15minavg = moving_average(temp1_15min, 15);
+    temp2_15minavg = moving_average(temp2_15min, 15);
+    pressure_15minavg = moving_average(pressure_15min, 15);
 
-    //oled_temp(temp1, temp2);
+    Serial.printf("Temperature: %.1f°C, %.1f°C, %.1fhPa\n", temp1_15minavg, temp2_15minavg, pressure_15minavg);
+    
+    oled_temp(temp1_15minavg, temp2_15minavg, pressure_15minavg);
   }
 
   if(now - last15min > delta15min){
     last15min = now;
-    // TODO send tempn_15minavg over mqtt if enabled
+      // mqtt
+    if(mqttdata.en == true){
+      mqtt_publish();
+    }
   }
-
   /*
   if(digitalRead(buttonboot)==0){
     digitalWrite(ledPin,0);

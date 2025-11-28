@@ -9,31 +9,24 @@ void oled_hello(){
   u8g2.sendBuffer();					// transfer internal memory to the display
 }
 
-void oled_temp(float t1, float t2){
+void oled_temp(float t1, float t2, float p){
   u8g2.clearBuffer();
-  u8g2.setFont(u8g2_font_logisoso18_tf);
+  u8g2.setFont(u8g2_font_logisoso16_tf);
 
-  u8g2.setCursor(0, 30);
+  u8g2.setCursor(0, 20);
   u8g2.print("T1: ");
   u8g2.print(t1);
   u8g2.print("°C");
 
-  u8g2.setCursor(0, 60);
+  u8g2.setCursor(0, 40);
   u8g2.print("T2: ");
   u8g2.print(t2);
   u8g2.print("°C");
 
-  u8g2.sendBuffer();
-}
-
-void oled_hoermann(){
-  u8g2.clearBuffer();
-
-  u8g2.setFont(u8g2_font_logisoso18_tf);
-  u8g2.setCursor(30,40);
-  u8g2.print("GTA5");
-
-  u8g2.drawFrame(12,0,116,64);
+  u8g2.setCursor(0, 60);
+  u8g2.print("P: ");
+  u8g2.print(p);
+  u8g2.print("hPa");
 
   u8g2.sendBuffer();
 }

@@ -122,9 +122,9 @@ struct apihandler_array {
   struct apihandler common;
   const struct attribute *attributes;  // Points to the strucure descriptor
   size_t data_size;                    // Size of C structure
-  void (*getter)(uint64_t, void *);    // Getter/check/begin function
-  void (*setter)(uint64_t, void *);    // Setter/start/end function
-  uint64_t (*sizer)(void);             // Array size, for data handlers only
+  bool (*getter)(void *, size_t, struct mg_str);  // Getter function
+  void (*setter)(void *, size_t, struct mg_str);  // Setter function
+  // size_t (*sizer)(struct mg_str);                 // Array size
 };
 
 struct attribute s_mqtt_attributes[] = {
@@ -152,6 +152,7 @@ struct attribute s_battery_attributes[] = {
   {NULL, NULL, NULL, 0, 0, false}
 };
 struct attribute s_temperature_attributes[] = {
+  {"press", "double", "%.1f", offsetof(struct temperature, press), 0, false},
   {"temp1", "double", "%.1f", offsetof(struct temperature, temp1), 0, false},
   {"temp2", "double", "%.1f", offsetof(struct temperature, temp2), 0, false},
   {NULL, NULL, NULL, 0, 0, false}
@@ -511,32 +512,37 @@ size_t print_struct(void (*out)(char, void *), void *ptr, va_list *ap) {
   return len;
 }
 
+static void populate_struct_from_json(struct mg_str json, char *tmp,
+                                      const struct attribute *attrs) {
+  size_t i;
+  for (i = 0; attrs[i].name != NULL; i++) {
+    const struct attribute *a = &attrs[i];
+    char jpath[100];
+    mg_snprintf(jpath, sizeof(jpath), "$.%s", a->name);
+    if (strcmp(a->type, "int") == 0) {
+      double d;
+      if (mg_json_get_num(json, jpath, &d)) {
+        int v = (int) d;
+        memcpy(tmp + a->offset, &v, sizeof(v));
+      }
+    } else if (strcmp(a->type, "bool") == 0) {
+      mg_json_get_bool(json, jpath, (bool *) (tmp + a->offset));
+    } else if (strcmp(a->type, "double") == 0) {
+      mg_json_get_num(json, jpath, (double *) (tmp + a->offset));
+    } else if (strcmp(a->type, "string") == 0) {
+      mg_json_get_str2(json, jpath, tmp + a->offset, a->size);
+    }
+  }
+}
+
 static void handle_object(struct mg_connection *c, struct mg_http_message *hm,
                           struct apihandler_data *h) {
   void *data = calloc(1, h->data_size);
   h->getter(data);
   if (hm->body.len > 0 && h->data_size > 0) {
     char *tmp = calloc(1, h->data_size);
-    size_t i;
     memcpy(tmp, data, h->data_size);
-    for (i = 0; h->attributes[i].name != NULL; i++) {
-      const struct attribute *a = &h->attributes[i];
-      char jpath[100];
-      mg_snprintf(jpath, sizeof(jpath), "$.%s", a->name);
-      if (strcmp(a->type, "int") == 0) {
-        double d;
-        if (mg_json_get_num(hm->body, jpath, &d)) {
-          int v = (int) d;
-          memcpy(tmp + a->offset, &v, sizeof(v));
-        }
-      } else if (strcmp(a->type, "bool") == 0) {
-        mg_json_get_bool(hm->body, jpath, (bool *) (tmp + a->offset));
-      } else if (strcmp(a->type, "double") == 0) {
-        mg_json_get_num(hm->body, jpath, (double *) (tmp + a->offset));
-      } else if (strcmp(a->type, "string") == 0) {
-        mg_json_get_str2(hm->body, jpath, tmp + a->offset, a->size);
-      }
-    }
+    populate_struct_from_json(hm->body, tmp, h->attributes);
     // If structure changes, increment version
     if (memcmp(data, tmp, h->data_size) != 0) s_device_change_version++;
     if (h->setter != NULL) h->setter(tmp);  // Can be NULL if readonly
@@ -550,12 +556,10 @@ static void handle_object(struct mg_connection *c, struct mg_http_message *hm,
 
 static size_t print_array(void (*out)(char, void *), void *ptr, va_list *ap) {
   struct apihandler_array *ha = va_arg(*ap, struct apihandler_array *);
-  uint64_t size = *va_arg(*ap, uint64_t *);
-  uint64_t start = *va_arg(*ap, uint64_t *);
-  size_t i, max = 20, len = 0;
+  struct mg_http_message *hm = va_arg(*ap, struct mg_http_message *);
+  size_t i = 0, len = 0;
   void *data = calloc(1, ha->data_size);
-  for (i = 0; i < max && start + i < size; i++) {
-    ha->getter(start + i, data);
+  for (i = 0; ha->getter(data, i, hm->query) == true; i++) {
     if (i > 0) len += mg_xprintf(out, ptr, ",");
     len += mg_xprintf(out, ptr, "{%M}", print_struct, ha->attributes, data);
   }
@@ -565,14 +569,25 @@ static size_t print_array(void (*out)(char, void *), void *ptr, va_list *ap) {
 
 static void handle_array(struct mg_connection *c, struct mg_http_message *hm,
                          struct apihandler_array *h) {
-  char buf[40] = "";
-  uint64_t size = h->sizer();
-  uint64_t start = 0;
-  mg_http_get_var(&hm->query, "start", buf, sizeof(buf));
-  if (!mg_str_to_num(mg_str(buf), 10, &start, sizeof(start))) start = 0;
-  mg_http_reply(c, 200, JSON_HEADERS, "{%m:%llu, %m:%llu, %m:[%M]}\n",
-                MG_ESC("size"), size, MG_ESC("start"), start, MG_ESC("data"),
-                print_array, h, &size, &start);
+  if (hm->body.len > 0 && h->data_size > 0) {
+    char *tmp = calloc(2, h->data_size);  // Allocate struct and backup
+    // The URI is /api/NAME/ITEM_INDEX. Get the array item index from the URI
+    size_t index = 0;
+    struct mg_str parts[3] = {{0, 0}, {0, 0}, {0, 0}};
+    mg_match(hm->uri, mg_str("/api/*/#"), parts);
+    mg_str_to_num(parts[1], 10, &index, sizeof(index));
+    // Fetch current item, then call a setter to update it
+    if (h->getter(tmp, index, hm->query)) {
+      memcpy(tmp + h->data_size, tmp, h->data_size);  // Make a backup
+      populate_struct_from_json(hm->body, tmp, h->attributes);
+      if (memcmp(tmp, tmp + h->data_size, h->data_size) != 0) {
+        s_device_change_version++; // Structure changed, signal to the UI
+      }
+      if (h->setter != NULL) h->setter(tmp, index, hm->query);  // Call setter
+    }
+    free(tmp);
+  }
+  mg_http_reply(c, 200, JSON_HEADERS, "[%M]\n", print_array, h, hm);
 }
 
 size_t print_timeseries(void (*out)(char, void *), void *ptr, va_list *ap) {
@@ -861,7 +876,7 @@ static struct mongoose_modbus_handlers s_modbus_handlers = {
 static void handle_modbus_pdu(struct mg_connection *c, uint8_t *buf,
                               size_t len) {
   MG_DEBUG(("Received PDU %p len %lu, hexdump:", buf, len));
-  mg_hexdump(buf, len);
+  if (mg_log_level >= MG_LL_VERBOSE) mg_hexdump(buf, len);
   // size_t hdr_size = 8, max_data_size = sizeof(response) - hdr_size;
   if (len < 12) {
     MG_ERROR(("PDU too small"));
@@ -920,7 +935,7 @@ static void handle_modbus_pdu(struct mg_connection *c, uint8_t *buf,
     }
     *(uint16_t *) &response[4] = mg_htons((uint16_t) (response_len - 6));
     MG_DEBUG(("Sending PDU response %lu:", response_len));
-    mg_hexdump(response, response_len);
+    if (mg_log_level >= MG_LL_VERBOSE) mg_hexdump(response, response_len);
     mg_send(c, response, response_len);
   }
 }

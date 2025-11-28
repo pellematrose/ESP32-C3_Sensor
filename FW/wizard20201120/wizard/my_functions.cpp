@@ -9,6 +9,7 @@ uint32_t voltages_cal[] = {0,0,0,0};  // {Sensor 1 CAL Low, Sensor 1 CAL High, S
 float zero_cal[] = {0, 0};  // {Sensor 1 Temp 0°C, Sensor 2 Temp 0°C} -> Saves the offset to 0°C. 
 bool encalch1 = 0;
 bool encalch2 = 0;
+uint32_t vol = 0;
 
 void load(int addr, void *buf, size_t len){
   uint8_t *p = (uint8_t *) buf;
@@ -24,18 +25,16 @@ void save(int addr, const void *buf, size_t len){
 }
 
 void my_get_battery(struct battery *data) {
-  // TODO: an Spannungsteiler anpassen, max spannung vom adc beachten
-  uint32_t vol = get_voltage(3);
+  vol = get_voltage(3) * 2; // 100k - 100k voltage divider
   bool chrg = get_charge_Pin();
   bool rdy = get_ready_Pin();
-  //TODO: Prozente anpassen 0V != 0%
-  float per = ((float)vol/2100)*100;
-  Serial.println(per);
+
+  float per   = ((float)vol - 2400.0f) / 1800.0f * 100.0f; // 0% at 2.4V 100% at 4.2V
   data->percent = (int)per;
-  data->voltage = vol;
+  data->voltage = vol; 
 
   // battery is discharging
-  if(!chrg && !rdy){
+  if(chrg && rdy){
     strcpy(data->status, "discharge");
   }
   // battery is charging
@@ -46,7 +45,7 @@ void my_get_battery(struct battery *data) {
   else if(chrg && !rdy){
     strcpy(data->status, "full");
   }
-  else{
+  else{ // TODO: detect PWM signal (chip tries to charge but not battery is connected)
     strcpy(data->status, "no bat");
   }
 }
@@ -58,10 +57,6 @@ void my_get_wifi(struct wifi *data) {
   load(SETTINGS_ADDRESS, data, sizeof(*data));
 }
 void my_set_wifi(struct wifi *data) {
-  //char name[25];
-  //char pass[25];
-  //strncpy(name, data->ssid, sizeof(name));
-  //strncpy(pass, data->password, sizeof(pass));
   // EEPROM Speicherung
   save(SETTINGS_ADDRESS, data, sizeof(*data));
 }
@@ -69,6 +64,7 @@ void my_set_wifi(struct wifi *data) {
 void my_get_temperature(struct temperature *data) {
   data->temp1 = temp1;
   data->temp2 = temp2;
+  data->press = pressure;
 }
 void my_set_temperature(struct temperature *data) {
   
@@ -116,10 +112,10 @@ void my_set_debug(struct debug *data) {
 }
 
 void my_get_mqtt(struct mqtt *data) {
-  load(SETTINGS_ADDRESS, data, sizeof(*data));
+  load(MQTT_ADDRESS, data, sizeof(*data));
 }
 void my_set_mqtt(struct mqtt *data) {
-  save(SETTINGS_ADDRESS, data, sizeof(*data));
+  save(MQTT_ADDRESS, data, sizeof(*data));
 }
 
 static uint64_t s_action_timeout_btnlow;  // Time when btnlow ends
@@ -219,6 +215,7 @@ void my_start_resetcal2(struct mg_str params) {
   zero_cal[1] = 0;
   save(CAL_ADDRESS, (const void *)voltages_cal, 16);
   save(ZERO_ADDRESS, (const void *)voltages_cal, 8);
+  Serial.println("Save values to flash");
 }
 
 static uint64_t s_action_timeout_reboot;  // Time when reboot ends
@@ -228,6 +225,6 @@ bool my_check_reboot(void) {
 void my_start_reboot(struct mg_str params) {
   MG_DEBUG(("Passed parameters: [%.*s]", params.len, params.buf));
   s_action_timeout_reboot = mg_now() + 1000; // Start reboot, finish after 1 second
-
+  Serial.println("Restart...");
   ESP.restart();
 }
