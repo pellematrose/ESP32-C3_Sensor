@@ -11,6 +11,7 @@ void oled_hello(){
 
 void oled_data(float t1, float t2, float p){
   u8g2.clearBuffer();
+  u8g2.setContrast(10);
   u8g2.setFont(u8g2_font_logisoso16_tf);
 
   u8g2.setCursor(0, 20);

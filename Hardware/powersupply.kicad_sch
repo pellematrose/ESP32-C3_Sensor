@@ -4568,16 +4568,6 @@
 		)
 		(uuid "219f9536-3388-4805-936b-6f3d0aa672cc")
 	)
-	(text "Vape Battery: 37x17mm\n"
-		(exclude_from_sim no)
-		(at 178.308 123.698 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a7d40d75-a47c-4785-b177-61eda5b9369d")
-	)
 	(text_box "UOUT: 470k=82k(3.36V/0.5V-1)"
 		(exclude_from_sim no)
 		(at 163.83 60.96 0)
@@ -4598,6 +4588,26 @@
 			(justify left top)
 		)
 		(uuid "80c21323-2661-48f0-b329-5e92765dd3e3")
+	)
+	(text_box "Enable Pull-ups in Firmware"
+		(exclude_from_sim no)
+		(at 31.75 135.89 0)
+		(size 19.05 5.08)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "ac4e67d1-6afc-4d46-942a-d207c14dd7e1")
 	)
 	(junction
 		(at 102.87 38.1)
@@ -4672,12 +4682,6 @@
 		(uuid "6d25567b-20d2-495b-90fc-07dbed789d5c")
 	)
 	(junction
-		(at 43.18 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6f2e764b-6aec-4a23-9ae2-6e3e99dc6d66")
-	)
-	(junction
 		(at 128.27 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4724,12 +4728,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aa2b3ae1-0fc9-4f48-9f3d-675d6bbc1362")
-	)
-	(junction
-		(at 35.56 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c300c7f7-e0bb-432c-b874-eca7752020cd")
 	)
 	(junction
 		(at 86.36 137.16)
@@ -4780,16 +4778,6 @@
 			(type default)
 		)
 		(uuid "01226949-666f-4f8b-a789-75278df2dc27")
-	)
-	(wire
-		(pts
-			(xy 35.56 144.78) (xy 53.34 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "064b87d3-d939-43c5-87e3-73416204d066")
 	)
 	(wire
 		(pts
@@ -4863,7 +4851,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 144.78) (xy 35.56 144.78)
+			(xy 31.75 144.78) (xy 53.34 144.78)
 		)
 		(stroke
 			(width 0)
@@ -4923,16 +4911,6 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 137.16) (xy 35.56 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32d76499-feec-4411-99c4-901baf092f35")
-	)
-	(wire
-		(pts
 			(xy 97.79 137.16) (xy 97.79 138.43)
 		)
 		(stroke
@@ -4960,16 +4938,6 @@
 			(type default)
 		)
 		(uuid "3ab43b70-00e2-41c3-8a7d-bc1c0e8ac305")
-	)
-	(wire
-		(pts
-			(xy 43.18 137.16) (xy 43.18 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cbe5394-4eac-4bb5-a76a-c3090d663f81")
 	)
 	(wire
 		(pts
@@ -5040,16 +5008,6 @@
 			(type default)
 		)
 		(uuid "5f5f0d92-06a7-4d2d-a90d-9f41d1dfc3a7")
-	)
-	(wire
-		(pts
-			(xy 43.18 142.24) (xy 53.34 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fb7eba6-761c-4da3-b2a8-92516eadd6af")
 	)
 	(wire
 		(pts
@@ -5423,7 +5381,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 142.24) (xy 43.18 142.24)
+			(xy 31.75 142.24) (xy 53.34 142.24)
 		)
 		(stroke
 			(width 0)
@@ -7977,25 +7935,24 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 180.34 130.81 0)
-		(mirror y)
+		(at 180.34 133.35 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3fe96295-045e-4800-b7f2-a72b71f63e6b")
 		(property "Reference" "J8"
-			(at 177.292 127.254 0)
+			(at 179.705 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 181.61 133.3499 0)
+			(at 181.61 130.8101 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8004,8 +7961,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
-			(at 180.34 130.81 0)
+		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
+			(at 180.34 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8014,7 +7971,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 180.34 130.81 0)
+			(at 180.34 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8023,7 +7980,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 180.34 130.81 0)
+			(at 180.34 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8032,7 +7989,7 @@
 			)
 		)
 		(property "Characteristics" ""
-			(at 180.34 130.81 0)
+			(at 180.34 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8041,7 +7998,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 180.34 130.81 0)
+			(at 180.34 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8137,91 +8094,6 @@
 			(project "powersupply"
 				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
 					(reference "#PWR?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Resistor_E12_0603:Resistor 10K")
-		(at 35.56 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "484895a4-0c47-4992-ab29-dc3e61e9366c")
-		(property "Reference" "R19"
-			(at 38.1 132.0799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 38.1 134.6199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 35.56 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 35.56 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Widerstand 0603"
-			(at 35.56 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C25804"
-			(at 35.56 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "49be0797-c385-4c25-bedd-02adc507002d")
-		)
-		(pin "1"
-			(uuid "9aee1357-fb6a-4879-9699-0ecf6764b0e4")
-		)
-		(instances
-			(project "ESP32-C3_Dev"
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-			(project "powersupply"
-				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
-					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -9135,78 +9007,6 @@
 			(project "powersupply"
 				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
 					(reference "U?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 43.18 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "817d6f4e-747f-4315-a583-e8f5e955206c")
-		(property "Reference" "#PWR059"
-			(at 43.18 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 43.18 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 43.18 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a3a476b6-1cab-4b7c-b5be-62b8ef60f1c5")
-		)
-		(instances
-			(project "ESP32-C3_Dev"
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
-					(reference "#PWR059")
-					(unit 1)
-				)
-			)
-			(project "powersupply"
-				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -10823,91 +10623,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Resistor_E12_0603:Resistor 10K")
-		(at 43.18 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "d97a5ab6-7f7d-4102-bcb4-be15ecbf3dd5")
-		(property "Reference" "R18"
-			(at 45.72 132.0799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 45.72 134.6199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 43.18 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Widerstand 0603"
-			(at 43.18 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C25804"
-			(at 43.18 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "6d90fa0c-53f2-463b-903c-af606d87fc47")
-		)
-		(pin "1"
-			(uuid "c0d83ee7-36d7-4dd5-836f-7f46e295afbc")
-		)
-		(instances
-			(project "ESP32-C3_Dev"
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
-					(reference "R18")
-					(unit 1)
-				)
-			)
-			(project "powersupply"
-				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
-					(reference "R?")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "_PS_LIB:C_1206")
 		(at 115.57 44.45 0)
 		(unit 1)
@@ -11659,78 +11374,6 @@
 			(project "powersupply"
 				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 35.56 129.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ff00c8dc-9ccf-4fb4-807c-4d85c053f62c")
-		(property "Reference" "#PWR060"
-			(at 35.56 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 35.56 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 35.56 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 35.56 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 35.56 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b771a22b-dc13-4c56-a44e-dfb58fba2d4a")
-		)
-		(instances
-			(project "ESP32-C3_Dev"
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/d9928072-ea8a-49f1-b3c8-e0aa18923ae3"
-					(reference "#PWR060")
-					(unit 1)
-				)
-			)
-			(project "powersupply"
-				(path "/e5456470-6685-4da1-b647-ae3ca1b237f2"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
