@@ -51,13 +51,16 @@ float temp1_15minavg = 0;
 float temp2_15minavg = 0;
 float pressure_15minavg = 0;
 uint8_t count = 0;
+uint8_t oled_state = 0; // 2: off, 0: temps, 1: bat
 
 // - timing
 uint32_t now = 0;
 uint32_t last1min = 0;
 uint32_t last15min = 0;
-uint32_t delta1min = 60000;  // TODO
-uint32_t delta15min = 900000;//15000;// TODO
+uint32_t delta1min = 60000;  
+uint32_t delta15min = 900000;
+uint32_t oledoff = 5000;
+uint32_t olednow = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -107,7 +110,7 @@ void setup() {
   }
   for(int i=0; i<15; i++){
     temp1_15min[i] = get_temperature(1) - zero_cal[0];
-    temp2_15min[i] = get_temperature(2) - zero_cal[1];
+    temp2_15min[i] = get_temperature(2) - zero_cal[1]+1.7; //TODO: Channel two somehow shows a false value on my hardware (remove 1.7!)
     pressure_15min[i] = bmp.pressure / 100;
   }
   temp1_15minavg = moving_average(temp1_15min, 15);
@@ -155,7 +158,7 @@ void loop() {
     last1min = now;
 
     temp1 = get_temperature(1) - zero_cal[0];
-    temp2 = get_temperature(2) - zero_cal[1];
+    temp2 = get_temperature(2) - zero_cal[1]+1.7; //TODO: Channel two somehow shows a false value on my hardware (remove 1.7!)
     
     if (! bmp.performReading()) {
       Serial.println("Failed to perform reading :(");
@@ -178,7 +181,7 @@ void loop() {
 
     Serial.printf("%.1f°C, %.1f°C, %.1fhPa, %dmV\n", temp1_15minavg, temp2_15minavg, pressure_15minavg, vol);
     
-    oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
+    
   }
 
   // time loop two
@@ -190,18 +193,28 @@ void loop() {
     }
   }
   
-  // display battery voltage at button press
-  if(get_buttonboot_Pin()==0){
-    oled_auxdata(vol);
-    delay(1000);
-    oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
+  if(millis() - olednow > oledoff){
+    olednow = millis();
+    oled_off();
+    oled_state = 0; // oled off
   }
-  /*
-  if(digitalRead(buttonboot)==0){
-    
-  }else{
-
-  }*/
+  // cycle through screens. TODO: debounce button!
+  if(get_buttonboot_Pin()==0){
+    switch (oled_state) {
+      case 0: oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
+              oled_state++;
+              break; // increment
+      case 1: oled_auxdata(vol);
+              oled_state++; 
+              break;
+      case 2: oled_off(); 
+              oled_state = 0;
+              break;
+      default: oled_off(); 
+              break;
+    }
+    delay(200);
+  }
 }
 
 extern "C" int lwip_hook_ip6_input(struct pbuf *p, struct netif *inp) __attribute__((weak));

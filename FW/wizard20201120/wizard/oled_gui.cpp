@@ -46,3 +46,8 @@ void oled_auxdata(uint32_t vol){
   //u8g2.print("%s", WiFi.localIP().toString().c_str());
   u8g2.sendBuffer();
 }
+
+void oled_off(){
+  u8g2.clearBuffer();
+  u8g2.sendBuffer();
+}

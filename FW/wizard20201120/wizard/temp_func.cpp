@@ -4,7 +4,7 @@
 #include "my_functions.h"
 #include "io_func.h"
 
-#define NO_OF_SAMPLES 64            // Mittelung über mehrere Samples
+#define NO_OF_SAMPLES 100            // Mittelung über mehrere Samples
 //#define ADC_CHANNEL 0 //ADC1_CHANNEL_0  // GPIO0 (A0)
 #define OP_OFFSET 28
 
