@@ -1,15 +1,7 @@
-*.zip
-/ESP32-C3_Dev-backups
-/production
-/ESP32-C3_Dev-backups
-/bom
-Hardware/fp-info-cache
-Hardware/\#auto_saved_files\#
-*.lck
-Hardware/_autosave-ESP32-C3_Dev.kicad_sch
-/Hardware/ESP32-C3_Dev-backups
-/nogit
 /FW/doxygen_out
-Hardware/.$Pin Diagram.drawio.bkp
-Housing/Housing.20260109-095509.FCBak
+*.bkp
+/Hardware/ESP32-C3_Dev-backups
+Hardware/fp-info-cache
+/Hardware/production
 Housing/Housing.20260109-100905.FCBak
+/nogit
