@@ -26,6 +26,7 @@ With li-ion charger over USB-C.
 * Deepsleep
 
 Device:
+
 * Use it as stand-alone device to measure up to two temperatures and show on display. No Wifi needed.
 * Use it as stand-alone device to measure up to two temperatures and check over access point.
 * Use it as headless device to measure up to two temperatures and broadcast over MQTT.
@@ -36,6 +37,14 @@ Device:
 * Use. Modify. Write. Code.
 
 # Info
+
 All open source!
 
+Hardware licensed under CERN-OHL-S v2 
+
+Firmware licensed under MIT License
+
+
+
 Makes use of mongoose.wz for HTML UI.
+
