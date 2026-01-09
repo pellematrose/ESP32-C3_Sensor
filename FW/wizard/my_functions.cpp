@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * Copyright (c) 2026 Per-Simon Saal
+ */
+
 #include "my_functions.h"
 #include <EEPROM.h>
 #include <Arduino.h>

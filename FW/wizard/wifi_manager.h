@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * Copyright (c) 2026 Per-Simon Saal
+ */
+ 
 #include <PubSubClient.h>
 #include <WiFi.h>
 

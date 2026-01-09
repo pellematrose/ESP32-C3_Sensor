@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * Copyright (c) 2026 Per-Simon Saal
+ */
+ 
 #include <cstdint>
 
 uint8_t led_function(uint8_t);

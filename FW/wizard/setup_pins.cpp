@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * Copyright (c) 2026 Per-Simon Saal
+ */
+ 
 #include "setup_pins.h"
 #include <Arduino.h>
 #include "my_globals.h"

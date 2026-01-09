@@ -1,4 +1,9 @@
-
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * Copyright (c) 2026 Per-Simon Saal
+ */
+ 
 #include "src/mongoose_glue.h"
 #include "my_globals.h"
 

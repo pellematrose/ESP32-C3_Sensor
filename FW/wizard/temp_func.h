@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ *
+ * Copyright (c) 2026 Per-Simon Saal
+ */
+ 
 #include <cstdint>
 #include <driver/adc.h>
 #include <esp_adc_cal.h>
