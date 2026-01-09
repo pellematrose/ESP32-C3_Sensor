@@ -4,6 +4,16 @@
 	(generator_version "9.0")
 	(uuid "e5456470-6685-4da1-b647-ae3ca1b237f2")
 	(paper "A4")
+	(title_block
+		(title "Power Supply")
+		(date "2026-01-09")
+		(rev "2")
+		(company "hand-crafted-electronics")
+		(comment 1 "https://ohwr.org/cern_ohl_s_v2.txt")
+		(comment 2 "https://github.com/pellematrose/ESP32-C3_Sensor/")
+		(comment 3 "Licensed under CERN-OHL-S v2")
+		(comment 4 "2026 Per-Simon Saal")
+	)
 	(lib_symbols
 		(symbol "Battery_Management:DW01A"
 			(exclude_from_sim no)

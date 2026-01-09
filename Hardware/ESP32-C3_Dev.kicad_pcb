@@ -22864,6 +22864,18 @@
 		(layer "Edge.Cuts")
 		(uuid "b2da94b6-d8b9-4c21-b5ff-01970a1224eb")
 	)
+	(gr_text "Licensed unter CERN-OHL-S v2\ngithub.com/pellematrose/ESP32-C3_Sensor/"
+		(at 154.96 96.792 0)
+		(layer "B.SilkS")
+		(uuid "50ffce66-a5cc-4a35-a0a9-cddbe7e75497")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(dimension
 		(type orthogonal)
 		(layer "Dwgs.User")

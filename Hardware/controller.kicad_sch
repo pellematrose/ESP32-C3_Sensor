@@ -4,6 +4,16 @@
 	(generator_version "9.0")
 	(uuid "2c791b75-5519-492e-b861-cbab3aa133e2")
 	(paper "A4")
+	(title_block
+		(title "Controller")
+		(date "2026-01-09")
+		(rev "2")
+		(company "hand-crafted-electronics")
+		(comment 1 "https://ohwr.org/cern_ohl_s_v2.txt")
+		(comment 2 "https://github.com/pellematrose/ESP32-C3_Sensor/")
+		(comment 3 "Licensed under CERN-OHL-S v2")
+		(comment 4 "2026 Per-Simon Saal")
+	)
 	(lib_symbols
 		(symbol "BMP388:BMP388"
 			(pin_names
