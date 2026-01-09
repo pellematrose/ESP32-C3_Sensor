@@ -5,28 +5,21 @@ With li-ion charger over USB-C.
 
 
 
-## Hardware Variants
-
-Always included: 
+## Hardware Components
 
 * Two channel PT100
 * Li-Ion Charging and protection circuit
 * Blue user LED
 * User button
-
-Optional:
 * 0.9" OLED
-* Li-Ion Battery
+* Li-Ion Battery connector
 * Barometer
 
-## Software Variants
+## Software Modules
 
-Always included:
 * Two channel PT100 measurement with calibration.
 * Access point to calibrate and configure the device and to get device information like battery voltage and temperatures.
 * Measure battery voltage. (if connected)
-
-Optional:
 * Display temperatures and voltage on OLED.
 * Barometer
 * MQTT

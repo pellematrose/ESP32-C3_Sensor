@@ -4128,7 +4128,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "8ad6b09d-2f43-42ba-81b7-b9615272412e")
+			(uuid "087f734e-c367-4ade-b15d-5ae7d372b81f")
 		)
 		(fp_line
 			(start -2 1.55)
@@ -4138,7 +4138,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "d24a65ff-2085-4292-b4da-d8189b21b153")
+			(uuid "168d00a3-0159-44cc-b5dd-8200418a3a2b")
 		)
 		(fp_line
 			(start 2.8 -1.65)
@@ -4148,7 +4148,7 @@
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "6462c3b1-9b79-4c42-9896-76fc3d20d901")
+			(uuid "ad7a0789-bc9a-4c4a-9f0a-487ba76cec9d")
 		)
 		(fp_line
 			(start -2.8 -1.65)
@@ -4158,7 +4158,7 @@
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "549b09d9-1aa6-4528-86fe-007430bea816")
+			(uuid "a75e7175-f814-4f3e-9bba-3e7e8b39637a")
 		)
 		(fp_line
 			(start 2.8 1.65)
@@ -4168,7 +4168,7 @@
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "5652b92f-d3bf-442c-829b-21ba4f6e5e8a")
+			(uuid "278fc8a1-1997-4354-a3e5-f3b1cfb44f02")
 		)
 		(fp_line
 			(start -2.8 1.65)
@@ -4178,7 +4178,7 @@
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "2762cac0-7d07-4ac0-b631-805307fdfb67")
+			(uuid "7616f165-c852-4024-801a-448fdb367bb3")
 		)
 		(fp_line
 			(start 2 -1.54)
@@ -4188,7 +4188,7 @@
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "503ad0e3-66d8-4008-ab38-b54e9f4970e2")
+			(uuid "64963b1b-6f50-4149-a18d-97907c893720")
 		)
 		(fp_line
 			(start -2 -1.54)
@@ -4198,7 +4198,7 @@
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "d91dfcdc-107e-4816-a0c6-126d115f2d0f")
+			(uuid "ca91d68f-f502-42a2-ad67-68fad8d133a6")
 		)
 		(fp_line
 			(start 2 1.54)
@@ -4208,7 +4208,7 @@
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "52303ef1-4dc4-4e6c-b426-76344cb574c3")
+			(uuid "ac8c8fe1-e8c9-4c95-8ff2-9ce1454d9191")
 		)
 		(fp_line
 			(start -2 1.54)
@@ -4218,7 +4218,7 @@
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "206ccae1-2361-4bc1-83b3-d01445b82a9f")
+			(uuid "33c5ff4c-f114-4565-8f83-44401aaef35d")
 		)
 		(fp_circle
 			(center 0 0)
@@ -4229,7 +4229,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "f9e573b5-20da-4886-99de-6c983e11bf2f")
+			(uuid "a318794e-80cc-487f-9bb0-05a14408d4f1")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 -3.81 90)
@@ -4264,6 +4264,17 @@
 			(uuid "ea04d0e0-c103-4df4-93dc-d2af99477b06")
 		)
 		(embedded_fonts no)
+		(model "D:/Privat/Projekte/5 Bauteile/TS-1088-AR02016--3DModel-STEP-269445.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D1.5mm"
 		(layer "F.Cu")
@@ -20301,7 +20312,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "8b784ce1-0364-4af4-b025-d3adc6f3a430")
+			(uuid "127c96a0-0f97-48c2-a20e-f966f7e0c608")
 		)
 		(fp_line
 			(start -2 -1.55)
@@ -20311,7 +20322,7 @@
 				(type default)
 			)
 			(layer "B.SilkS")
-			(uuid "bc1642b2-9c22-4a51-a76f-3c4254e26c15")
+			(uuid "81465982-d7f8-45e5-b87b-57f6a917b0d4")
 		)
 		(fp_line
 			(start 2.8 1.65)
@@ -20321,7 +20332,7 @@
 				(type default)
 			)
 			(layer "B.CrtYd")
-			(uuid "d2536e28-d5e4-49ab-8a00-2d5fc6bbb3ec")
+			(uuid "7469234b-69c5-40db-96fe-c6c0b1186bbd")
 		)
 		(fp_line
 			(start 2.8 -1.65)
@@ -20331,7 +20342,7 @@
 				(type default)
 			)
 			(layer "B.CrtYd")
-			(uuid "ead0794d-e43c-47eb-ae5b-a705f6539d9e")
+			(uuid "2e60e84b-c664-4bca-ba9a-5f5cc44effb5")
 		)
 		(fp_line
 			(start -2.8 1.65)
@@ -20341,7 +20352,7 @@
 				(type default)
 			)
 			(layer "B.CrtYd")
-			(uuid "f4d66924-fa91-470c-aca3-b04bb455a0f0")
+			(uuid "0756afb9-1899-45fa-b3a8-b175358b58a6")
 		)
 		(fp_line
 			(start -2.8 -1.65)
@@ -20351,7 +20362,7 @@
 				(type default)
 			)
 			(layer "B.CrtYd")
-			(uuid "fc9b1f7b-2769-4d5c-ada0-5693a6828b02")
+			(uuid "9e30b74a-b03b-4ae0-9eae-deb29d8ae850")
 		)
 		(fp_line
 			(start 2 1.54)
@@ -20361,7 +20372,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "c6f49448-16c4-4140-9040-ed181a82689f")
+			(uuid "1063b45a-6df4-4027-a84e-a62318f169ac")
 		)
 		(fp_line
 			(start 2 -1.54)
@@ -20371,7 +20382,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "7debbacb-a9f6-4e4f-9e15-67979c47e4fc")
+			(uuid "78839677-8e87-40de-9e44-c9385b64af3a")
 		)
 		(fp_line
 			(start -2 1.54)
@@ -20381,7 +20392,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "f8a92a3b-cd6c-41ac-8548-1431a16dfd35")
+			(uuid "545d62f5-0dde-44d2-9a4e-0b34cae41033")
 		)
 		(fp_line
 			(start -2 -1.54)
@@ -20391,7 +20402,7 @@
 				(type default)
 			)
 			(layer "B.Fab")
-			(uuid "46b682d4-0ab3-43c7-b645-f4c86461a54c")
+			(uuid "dee67b36-7b7a-467c-ae63-e2047a029884")
 		)
 		(fp_circle
 			(center 0 0)
@@ -20402,7 +20413,7 @@
 			)
 			(fill no)
 			(layer "B.Fab")
-			(uuid "34788396-f14c-4f51-8509-b2498f38b671")
+			(uuid "0955c65c-5a05-4a4b-81f7-48c7cba1f16d")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 3.81 0)
@@ -20438,6 +20449,17 @@
 			(uuid "3f9c3644-f9c3-4efe-b409-27bd2e872ddd")
 		)
 		(embedded_fonts no)
+		(model "D:/Privat/Projekte/5 Bauteile/TS-1088-AR02016--3DModel-STEP-269445.STEP"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 -0 -0)
+			)
+		)
 	)
 	(footprint "kibuzzard-68E97F46"
 		(layer "B.Cu")
