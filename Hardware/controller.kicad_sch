@@ -2095,7 +2095,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 100.33) (xy 203.2 100.33)
+			(xy 199.39 100.33) (xy 203.2 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2365,7 +2365,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 97.79) (xy 203.2 97.79)
+			(xy 199.39 97.79) (xy 203.2 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3480,7 +3480,7 @@
 	)
 	(hierarchical_label "USB+"
 		(shape bidirectional)
-		(at 196.85 100.33 180)
+		(at 199.39 100.33 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3522,6 +3522,17 @@
 		)
 		(uuid "a8be1154-e36a-43a2-89fa-b90c34657cef")
 	)
+	(hierarchical_label "PS"
+		(shape input)
+		(at 199.39 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "af80b74b-d0fe-45c6-8a47-1d6e45053650")
+	)
 	(hierarchical_label "CHARGING"
 		(shape input)
 		(at 199.39 95.25 180)
@@ -3546,7 +3557,7 @@
 	)
 	(hierarchical_label "USB-"
 		(shape bidirectional)
-		(at 196.85 97.79 180)
+		(at 199.39 97.79 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3685,89 +3696,6 @@
 			(project "ESP32-C3_Dev"
 				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/91c554b6-9438-44a2-99d9-22b509dc076e"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 199.39 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "09736d87-cf83-4fd6-ad4b-a8f11089fab8")
-		(property "Reference" "TP6"
-			(at 192.786 87.122 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 196.088 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 199.39 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 199.39 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 199.39 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Characteristics" ""
-			(at 199.39 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" ""
-			(at 199.39 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "243c6d67-f0e0-4ae4-a38c-729b7616e58c")
-		)
-		(instances
-			(project "ESP32-C3_Dev"
-				(path "/db6fe335-723a-49f3-91f7-1db51b82a15a/91c554b6-9438-44a2-99d9-22b509dc076e"
-					(reference "TP6")
 					(unit 1)
 				)
 			)

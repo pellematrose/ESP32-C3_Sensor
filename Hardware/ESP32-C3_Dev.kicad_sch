@@ -219,9 +219,9 @@
 				(justify left)
 			)
 		)
-		(pin "SHDNLDO" output
+		(pin "PS" input
 			(at 147.32 67.31 180)
-			(uuid "db3ba167-f75d-40e0-ab58-12e0a82c1cf5")
+			(uuid "97a2f38d-945e-457d-9232-672aac933700")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -401,9 +401,9 @@
 				(justify right)
 			)
 		)
-		(pin "SHDNLDO" input
+		(pin "PS" input
 			(at 135.89 67.31 0)
-			(uuid "284d4f2b-2baf-45ae-8b61-c331c868eff2")
+			(uuid "def63d49-99a9-473c-ae5c-3d8c6706fc7e")
 			(effects
 				(font
 					(size 1.27 1.27)
