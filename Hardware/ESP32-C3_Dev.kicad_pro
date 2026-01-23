@@ -466,7 +466,8 @@
       "_PS_LIB_PCB"
     ],
     "pinned_symbol_libs": [
-      "PS_IC"
+      "PS_IC",
+      "_PS_LIB"
     ]
   },
   "meta": {
