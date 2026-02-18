@@ -9,7 +9,6 @@ Hardware/controller.kicad_sch
 Hardware/ESP32-C3_Dev.kicad_pcb
 /Hardware/footprint_lib.pretty
 Hardware/controller.kicad_sch
-Hardware/ESP32-C3_Dev.kicad_pcb
 Hardware/fp-lib-table
 Hardware/powersupply.kicad_sch
 Hardware/pt100.kicad_sch
@@ -17,7 +16,7 @@ Hardware/sym-lib-table
 Hardware/sym_lib.kicad_sym
 Hardware/pt100.kicad_sch
 Hardware/controller.kicad_sch
-Hardware/ESP32-C3_Dev.kicad_pcb
+Hardware/ESP32-C3_Dev.kicad_sch
 /bom
 /Hardware/dev
 
