@@ -60,3 +60,4 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+Hardware/ESP32-C3_Dev.kicad_dru
