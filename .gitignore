@@ -6,7 +6,7 @@ Stencil Jig/Stencil Jig.20260123-172621.FCBak
 /Hardware/3dmodels
 Hardware/archive_3d_models.log
 Hardware/controller.kicad_sch
-Hardware/ESP32-C3_Dev.kicad_pcb
+Hardware/EESP32-C3_Sensor.kicad_pcb
 /Hardware/footprint_lib.pretty
 Hardware/controller.kicad_sch
 Hardware/fp-lib-table
@@ -16,7 +16,9 @@ Hardware/sym-lib-table
 Hardware/sym_lib.kicad_sym
 Hardware/pt100.kicad_sch
 Hardware/controller.kicad_sch
-Hardware/ESP32-C3_Dev.kicad_dru
+Hardware/ESP32-C3_Sensor.kicad_dru
+Hardware/ESP32-C3_Sensor.kicad_pro
+Hardware/ESP32-C3_Sensor.kicad_sch
 /bom
 /Hardware/dev
 
@@ -61,5 +63,4 @@ fp-info-cache
 # Local project settings
 *.kicad_prl
 
-Hardware/ESP32-C3_Dev.kicad_pro
-Hardware/ESP32-C3_Dev.kicad_sch
+
