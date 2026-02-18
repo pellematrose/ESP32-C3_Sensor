@@ -1,0 +1,244 @@
+(footprint "Xunpu TS-1088"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 2.686 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "47746a71-b51c-48b6-89a6-faa301751e67")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "SW_MEC_5G"
+		(at 0 -5.81 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9f4c691c-2b37-49b1-9edd-d51d3a719a35")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488"
+		(at 0 -6.31 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "94804685-80d9-44e0-ab3d-bb7b5a7ac604")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "MEC 5G single pole normally-open tactile switch"
+		(at 0 -6.31 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "81ea4929-99d9-4003-9926-a49e5d3facba")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Characteristics" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d1cf1d2-4f12-4e9a-8d98-28c1658affa9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C720477"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "285f621f-9043-48b1-b329-f263c283c3e9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2 1.55)
+		(end 2 1.55)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "60f7e8df-2273-4fa4-8eef-bae939b4d993")
+	)
+	(fp_line
+		(start -2 -1.55)
+		(end 2 -1.55)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0860f11c-4be6-41fe-9cf2-a0268c1a3c89")
+	)
+	(fp_line
+		(start 2.8 1.65)
+		(end -2.8 1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "67453933-1bfc-4bb8-82c3-adb2d7f67b6d")
+	)
+	(fp_line
+		(start 2.8 -1.65)
+		(end 2.8 1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "c94b5945-7010-455b-a54d-6f3336f78f46")
+	)
+	(fp_line
+		(start -2.8 1.65)
+		(end -2.8 -1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "abc091d1-1cdf-462f-8aaf-9da58ba26e0a")
+	)
+	(fp_line
+		(start -2.8 -1.65)
+		(end 2.8 -1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "87300ae2-6396-41c5-ab04-a61fadf5d3b8")
+	)
+	(fp_line
+		(start 2 1.54)
+		(end -2 1.54)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "baca9897-e584-4b69-99db-03ee22f0f283")
+	)
+	(fp_line
+		(start 2 -1.54)
+		(end 2 1.54)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "5da3ab4a-3244-4b46-b730-bd2950a46fa8")
+	)
+	(fp_line
+		(start -2 1.54)
+		(end -2 -1.54)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "7f4f9205-8383-4fbd-9d78-fce41c424cd9")
+	)
+	(fp_line
+		(start -2 -1.54)
+		(end 2 -1.54)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "347c32e8-aac2-4233-884d-6ba86748f766")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.758153 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "4a6d1487-e73c-44b2-a383-af7c6756aec7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -3.81 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "034b60ba-025d-4a6b-b5b1-1653096ebaf0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.075 0 180)
+		(size 1.35 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "fcf2dfea-6f40-46d2-8974-fac7bc108b20")
+	)
+	(pad "2" smd rect
+		(at 2.075 0 180)
+		(size 1.35 1.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "498cb366-26a6-41f9-bdf7-25eb5d1ffd2a")
+	)
+	(embedded_fonts no)
+	(model "D:/Privat/Projekte/5 Bauteile/TS-1088-AR02016--3DModel-STEP-269445.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+	(model "/home/per-simon/Dokumente/Projekte/KiCad Libs/3D Models/TS-1088-AR02016--3DModel-STEP-269445.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

@@ -1,0 +1,114 @@
+(footprint "Stencil hole"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Hole with specil F.Paste layer to align Stencil from Aisler")
+	(property "Reference" "REF**"
+		(at 0.5 6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "356314fe-44a0-4235-a30d-a9ab1cb89e53")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Stencil hole"
+		(at 0.5 7.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "983143ad-9339-47b5-8935-b8b950494340")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "96b697fd-9b25-4762-8aa1-5f708e01184c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Hole with specil F.Paste layer to align Stencil"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8fd58aa8-64d2-4db9-a84b-ae63ca630169")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole board_only exclude_from_bom dnp)
+	(fp_rect
+		(start -1.75 -0.25)
+		(end 1.75 0.25)
+		(stroke
+			(width 0.01)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "e5e74534-f227-4bb8-b4f3-f78e393ef3df")
+	)
+	(fp_rect
+		(start -0.25 -1.75)
+		(end 0.25 1.75)
+		(stroke
+			(width 0.01)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "8432ad7f-7539-4984-9fce-f64fca951657")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.25 0)
+		(stroke
+			(width 0.01)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		(uuid "c7f1b720-48a3-4fa9-8bfa-ca36925d86d9")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "53f1d304-a6fd-4620-bc1a-8a59f5fadd04")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" thru_hole circle
+		(at 0 0)
+		(size 3 3)
+		(drill 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "cf2d8df9-fe31-42a3-974b-ad7475e28d4f")
+	)
+	(embedded_fonts no)
+)

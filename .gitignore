@@ -8,3 +8,18 @@ fp-info-cache
 Hardware/fabrication-toolkit-options.json
 Stencil Jig/Stencil Jig.20260123-172621.FCBak
 *.FCBak
+/Hardware/3dmodels
+Hardware/archive_3d_models.log
+Hardware/controller.kicad_sch
+Hardware/ESP32-C3_Dev.kicad_pcb
+/Hardware/footprint_lib.pretty
+Hardware/controller.kicad_sch
+Hardware/ESP32-C3_Dev.kicad_pcb
+Hardware/fp-lib-table
+Hardware/powersupply.kicad_sch
+Hardware/pt100.kicad_sch
+Hardware/sym-lib-table
+Hardware/sym_lib.kicad_sym
+Hardware/pt100.kicad_sch
+Hardware/controller.kicad_sch
+Hardware/ESP32-C3_Dev.kicad_pcb

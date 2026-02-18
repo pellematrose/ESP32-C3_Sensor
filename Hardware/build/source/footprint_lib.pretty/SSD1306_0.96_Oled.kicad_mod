@@ -1,0 +1,363 @@
+(footprint "SSD1306_0.96_Oled"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "996674a0-407e-499a-af30-4f9a738db217")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "OLED_SSD1306"
+		(at 0 -2 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1e765c8d-fbde-4828-ac05-c7b314437b5f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8da2bec6-df1a-4e66-8519-317e71cfdb69")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8136d524-8936-4400-9ddd-4c55e80b0223")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start 13 13)
+		(end 13 -13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "046e6199-470b-4f1c-86d0-3e4eb5f2b710")
+	)
+	(fp_line
+		(start 13 -13)
+		(end -13 -13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "13744649-fd8e-4d77-b697-001bd40fa1bd")
+	)
+	(fp_line
+		(start 12.33 8.47)
+		(end 12.33 -8.43)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "97f13043-dc4d-4d37-b067-07015d4c80ab")
+	)
+	(fp_line
+		(start 12.33 -8.43)
+		(end -12.37 -8.43)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "198eee10-16ea-4c64-8e8e-373dc67085a7")
+	)
+	(fp_line
+		(start 10.87 3.91)
+		(end 10.87 -6.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "bc6aa668-ef85-4431-a189-f6138056d439")
+	)
+	(fp_line
+		(start 10.87 -6.95)
+		(end -10.87 -6.95)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "198a2668-6821-4d28-a7db-9fc6eb7f4a05")
+	)
+	(fp_line
+		(start 7 13)
+		(end 13 13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "e0f193cd-fe36-4611-b230-4a13fffee41f")
+	)
+	(fp_line
+		(start 7 11)
+		(end 7 13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "15850c30-727d-4cfc-8a0f-c474b88b7595")
+	)
+	(fp_line
+		(start -7 13)
+		(end -7 11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "83c900bc-8dc4-427c-b775-c51aba32fcf4")
+	)
+	(fp_line
+		(start -7 11)
+		(end 7 11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "3b9d66b5-72f1-4a1b-8853-ebfbcf00aa9e")
+	)
+	(fp_line
+		(start -10.87 3.91)
+		(end 10.87 3.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "a0ef0c0e-03be-47c5-98e6-46dd71108ab4")
+	)
+	(fp_line
+		(start -10.87 -6.95)
+		(end -10.87 3.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "ba7ca3f3-0562-4598-a61f-7af7d89f8583")
+	)
+	(fp_line
+		(start -12.37 8.47)
+		(end 12.33 8.47)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "c371a909-2527-4266-80a5-83061213f71d")
+	)
+	(fp_line
+		(start -12.37 -8.43)
+		(end -12.37 8.47)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "1cd6b7af-8570-488e-8254-8180d9885a8e")
+	)
+	(fp_line
+		(start -13 13)
+		(end -7 13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "d9d4e81e-bb56-4531-8c87-ea3eba4254ce")
+	)
+	(fp_line
+		(start -13 -13)
+		(end -13 13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "d33c35eb-9e60-44c4-a89e-b5848da3e915")
+	)
+	(fp_line
+		(start 13 13)
+		(end 13 -13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "02e3b834-775b-4577-8a73-b0fa22e53166")
+	)
+	(fp_line
+		(start 13 -13)
+		(end -13 -13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d1c8cc3a-3eea-40b8-b3ed-2a703357b076")
+	)
+	(fp_line
+		(start 7 13)
+		(end 13 13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "408fce35-7b5e-4022-be34-b30471a5ebe3")
+	)
+	(fp_line
+		(start 7 11)
+		(end 7 13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3e70fb62-166a-4849-a2e9-220cdca67003")
+	)
+	(fp_line
+		(start -7 13)
+		(end -7 11)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "99aa624c-5f4f-427f-937c-0eed11f29c7b")
+	)
+	(fp_line
+		(start -7 11)
+		(end 7 11)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c8aa574b-7887-46ae-b101-19a1b9f89074")
+	)
+	(fp_line
+		(start -13 13)
+		(end -7 13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "976646e5-57ec-47ed-9777-1e8e576839aa")
+	)
+	(fp_line
+		(start -13 -13)
+		(end -13 13)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e3551c69-ce5d-40da-b5b4-7628e871038e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.5 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "6c1e3749-8644-4765-87bd-9fd373b9b2b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -3.81 -11.5 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9eeec059-1bc8-43d5-8ee3-b0c293dff0df")
+	)
+	(pad "2" thru_hole circle
+		(at -1.27 -11.5 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a70eeda8-fc24-4b3e-aaf1-ff2e0c60f8e2")
+	)
+	(pad "3" thru_hole circle
+		(at 1.27 -11.5 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "720595d8-4778-47e3-a3c4-98c8d31d98e1")
+	)
+	(pad "4" thru_hole circle
+		(at 3.81 -11.5 180)
+		(size 1.8 1.8)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "56c1d58e-6424-4eb5-a028-04a3889a480a")
+	)
+	(embedded_fonts no)
+	(model "D:/Privat/Projekte/5 Bauteile/ssd1306-oled-display-128x64-1.snapshot.5/SSD1306_OLED_Display(128x64).step"
+		(offset
+			(xyz 0 0 2.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "/home/per-simon/Dokumente/Projekte/KiCad Libs/3D Models/SSD1306_OLED_Display(128x64).step"
+		(offset
+			(xyz 0 -0.3 2.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)
