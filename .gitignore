@@ -17,6 +17,8 @@ Hardware/sym_lib.kicad_sym
 Hardware/pt100.kicad_sch
 Hardware/controller.kicad_sch
 Hardware/ESP32-C3_Dev.kicad_sch
+Hardware/ESP32-C3_Dev.kicad_dru
+Hardware/ESP32-C3_Dev.kicad_pro
 /bom
 /Hardware/dev
 
@@ -60,4 +62,4 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
-Hardware/ESP32-C3_Dev.kicad_dru
+
