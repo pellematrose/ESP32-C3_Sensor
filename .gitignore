@@ -64,3 +64,9 @@ fp-info-cache
 *.kicad_prl
 
 
+Hardware/ESP32-C3_Sensor-erc.rpt
+Hardware/ESP32-C3_Sensor.kicad_pcb
+Hardware/ESP32-C3_Sensor.kicad_pro
+Hardware/ESP32-C3_Sensor.kicad_sch
+Hardware/ESP32-C3_Sensor/drc_report.txt
+Hardware/ESP32-C3_Sensor/erc_report.txt
