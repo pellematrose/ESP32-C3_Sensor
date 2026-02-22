@@ -24,6 +24,7 @@
 #include "Adafruit_BMP3XX.h"
 #include "WiFi.h"
 #include "io_func.h"
+#include "storage.h"
 
 #define ADC_CHANNEL1 ADC1_CHANNEL_1  // GPIO1
 #define ADC_CHANNEL2 ADC1_CHANNEL_2  // GPIO2
@@ -83,6 +84,7 @@ void setup() {
   esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, DEFAULT_VREF, &adc_chars);
 
   EEPROM.begin(512); // oder eine andere Größe, je nach Bedarf
+  check_magic();
   load(CAL_ADDRESS, (void *)voltages_cal, sizeof(voltages_cal));
   load(ZERO_ADDRESS, (void *)zero_cal, sizeof(zero_cal));
 
@@ -124,6 +126,7 @@ void setup() {
   vol = get_voltage(3) * 2; // 100k : 100k voltage divider
   chrg = get_charge_Pin();
   rdy = get_ready_Pin();
+  Serial.printf("t1: %.1f, t2: %.1f, p: %.2f, vol: %.3f", temp1_15minavg, temp2_15minavg, pressure_15minavg, vol);
   oled_data(temp1_15minavg, temp2_15minavg, pressure_15minavg);
   // fill array function end
 
@@ -152,11 +155,13 @@ void loop() {
   mongoose_poll();
 
   now = millis();
-
+  //Serial.println("läuft");
+  
   // mqtt
-  if(mqttdata.en == true){
+  if(apmode == 1 && mqttdata.en == true){
     mqtt_loop();
   }
+  
   
   // time loop one
   if(now - last1min > delta1min){
@@ -193,7 +198,7 @@ void loop() {
   if(now - last15min > delta15min){
     last15min = now;
       // mqtt
-    if(mqttdata.en == true){
+    if(apmode == 1 && mqttdata.en == true){
       mqtt_publish();
     }
   }

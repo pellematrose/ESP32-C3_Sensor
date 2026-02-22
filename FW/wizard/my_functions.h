@@ -13,8 +13,8 @@
 extern "C" {
 #endif
 
-void load(int addr, void *buf, size_t len);
-void save(int addr, const void *buf, size_t len);
+//void load(int addr, void *buf, size_t len);
+//void save(int addr, const void *buf, size_t len);
 void my_get_battery(struct battery *data);
 void my_set_battery(struct battery *data);
 void my_get_wifi(struct wifi *data);

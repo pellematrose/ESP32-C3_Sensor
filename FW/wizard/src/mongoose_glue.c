@@ -14,7 +14,7 @@ void glue_start_reboot(struct mg_str params) {
   s_action_timeout_reboot = mg_now() + 1000; // Start reboot, finish after 1 second
 }
 
-static struct mqtt s_mqtt = {true, "yourmqttbroker", "/pt100/pressure", "/pt100/batvol", "/pt100/sensor2", "/pt100/sensor1"};
+static struct mqtt s_mqtt = {false, "yourmqttbroker", "/pt100/pressure", "/pt100/batvol", "/pt100/sensor2", "/pt100/sensor1"};
 void glue_get_mqtt(struct mqtt *data) {
   *data = s_mqtt;  // Sync with your device
 }

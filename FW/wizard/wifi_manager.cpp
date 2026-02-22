@@ -28,38 +28,76 @@ WiFiServer  server(80);
 WiFiClient thermoClient;
 PubSubClient client(thermoClient);
 
-void connect_wifi(){
+void connect_wifi()
+{
   uint8_t timeout = 0;
 
   load(SETTINGS_ADDRESS, &c, sizeof(c));
 
-  // Connecting to extern Wifi network
-  WiFi.setHostname("Thermometer");
+  Serial.println();
+  Serial.println("----- WIFI INIT -----");
+
+  WiFi.setHostname("Thermometer1");
   WiFi.mode(WIFI_STA);
-  //WiFi.begin(SSID_STA, PW_STA);
   WiFi.begin(c.ssid, c.pass);
   Serial.printf("Connecting to %s\n", c.ssid);
-  while (WiFi.status() != WL_CONNECTED && timeout < 12) {
-    timeout++;
+
+  while (WiFi.status() != WL_CONNECTED && timeout < 12)
+  {
     delay(500);
     Serial.print(".");
-    if(timeout==11) open_ap();
+    timeout++;
   }
-  MDNS.begin("Thermometer");
-  Serial.println(" connected!");
-  MG_INFO(("Connected; IP: %s", WiFi.localIP().toString().c_str()));
-  apmode = 1; // connected to network
+
+  Serial.println();
+
+  if (WiFi.status() == WL_CONNECTED)
+  {
+    Serial.println("STA connected");
+    Serial.printf("IP: %s\n", WiFi.localIP().toString().c_str());
+
+    if (MDNS.begin("thermometer1"))
+    {
+      Serial.println("mDNS started");
+    }
+    else
+    {
+      Serial.println("mDNS failed");
+    }
+    apmode = 1;   // connected to network
+    start_webserver();
+  }
+  else
+  {
+    Serial.println("STA failed -> switching to AP");
+    open_ap();
+  }
 }
 
-void open_ap(){
-  // Establish a AP
+void open_ap()
+{
+  Serial.println("----- START AP -----");
+
+  WiFi.disconnect(true);
+  delay(200);
+
+  WiFi.mode(WIFI_AP);
   WiFi.softAP(ssidap, passwordap);
-  delay(100);
+  delay(200);
   IPAddress IP = WiFi.softAPIP();
-  Serial.printf("Connected; IP: %s", WiFi.localIP().toString().c_str());
-  //MG_INFO(("Connected; IP: %s", WiFi.localIP().toString().c_str()));
+  Serial.printf("AP IP: %s\n", IP.toString().c_str());
+  apmode = 0;
+  start_webserver();
+  Serial.println("AP ready");
+}
+
+void start_webserver()
+{
+  Serial.println("Starting webserver...");
   server.begin();
-  apmode = 0; // open AP
+  delay(50);
+  Serial.printf("Free heap: %u\n", ESP.getFreeHeap());
+  Serial.println("Webserver started");
 }
 
 void mqtt_callback(char* topic, byte* message, unsigned int length) {
@@ -80,7 +118,8 @@ void mqtt_reconnect() {
     } 
     else {
       if(mqtt_counter == 10){
-        ESP.restart();
+        //ESP.restart();
+        mqtt_counter = 0; // zeile entfernen, wenn restart geht.
       }
       else{
         mqtt_counter++;

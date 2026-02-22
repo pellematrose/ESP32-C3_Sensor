@@ -10,13 +10,14 @@
 #include "my_globals.h"
 #include "temp_func.h"
 #include "io_func.h"
+#include "storage.h"
 
 uint32_t voltages_cal[] = {0,0,0,0};  // {Sensor 1 CAL Low, Sensor 1 CAL High, Sensor 2 CAL Low, Sensor 2 CAL High}
 float zero_cal[] = {0, 0};  // {Sensor 1 Temp 0°C, Sensor 2 Temp 0°C} -> Saves the offset to 0°C. 
 bool encalch1 = 0;
 bool encalch2 = 0;
 
-void load(int addr, void *buf, size_t len){
+/*void load(int addr, void *buf, size_t len){
   uint8_t *p = (uint8_t *) buf;
   while (len--) *p++ = EEPROM.read(addr++);
 }
@@ -27,7 +28,7 @@ void save(int addr, const void *buf, size_t len){
     EEPROM.write(addr++, *p++);
   } 
   EEPROM.commit();
-}
+}*/
 
 void my_get_battery(struct battery *data) {
   float per   = ((float)vol - 2400.0f) / 1800.0f * 100.0f; // 0% at 2.4V 100% at 4.2V

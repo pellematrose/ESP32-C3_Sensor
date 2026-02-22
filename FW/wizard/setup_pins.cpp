@@ -32,14 +32,14 @@ void IRAM_ATTR rstbtn_isr(){
 
 void setup_pins(){
   // pins
-  pinMode(readyPin, INPUT);
+  pinMode(readyPin, INPUT_PULLUP);
   pinMode(unused1Pin, OUTPUT);
   pinMode(unused2Pin, OUTPUT);
   pinMode(shdnopPin, OUTPUT);
   pinMode(shdnldoPin, OUTPUT);
   pinMode(ledPin, OUTPUT);
   pinMode(buttonbootPin, INPUT_PULLUP);
-  pinMode(chargingPin, INPUT);
+  pinMode(chargingPin, INPUT_PULLUP);
 
   digitalWrite(unused1Pin, 0);
   digitalWrite(unused2Pin, 0);

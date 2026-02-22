@@ -3,9 +3,10 @@
  *
  * Copyright (c) 2026 Per-Simon Saal
  */
- 
+#pragma once
 #include <PubSubClient.h>
 #include <WiFi.h>
+#include "storage.h"
 
 extern PubSubClient client; 
 extern WiFiClient thermoClient; 
@@ -29,6 +30,7 @@ extern md mqttdata;
 
 void connect_wifi();
 void open_ap();
+void start_webserver();
 
 void mqtt_setup();
 void mqtt_reconnect();

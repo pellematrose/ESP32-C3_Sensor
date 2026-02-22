@@ -10,10 +10,11 @@
 #define LED_PIN 8  // LED pin
 //#define WIFI_SSID "wifi_network_name"  // Change this
 //#define WIFI_PASS "wifi_password"      // And this
-#define SETTINGS_ADDRESS 0  //{WIFI SSID, 25 | WIFI PASS, 25}
-#define CAL_ADDRESS 50      // 16 Bytes
-#define ZERO_ADDRESS 66     // 8 Bytes
-#define MQTT_ADDRESS 74     // 1+50+4*30 Bytes (1*toggle+1*broker+4*topic)
+#define MAGIC_ADDRESS 0     //MAGIC WORD 8 
+#define SETTINGS_ADDRESS 8  //{WIFI SSID, 25 | WIFI PASS, 25}
+#define CAL_ADDRESS 59      // 16 Bytes
+#define ZERO_ADDRESS 74     // 8 Bytes
+#define MQTT_ADDRESS 82     // 1+50+4*30 Bytes (1*toggle+1*broker+4*topic)
 
 #define I2C_SCL 20
 #define I2C_SDA 21

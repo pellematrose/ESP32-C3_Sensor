@@ -19,6 +19,8 @@ extern "C" {
 #define WIZARD_ENABLE_WEBSOCKET 0
 
 #define WIZARD_ENABLE_MQTT 0
+#define WIZARD_ENABLE_OTA_OVER_MQTT 0
+#define WIZARD_MQTT_DEVICE_ID ""
 #define WIZARD_MQTT_URL ""
 
 #define WIZARD_ENABLE_SNTP 0  // Enable time sync.
@@ -31,6 +33,17 @@ extern "C" {
 #define WIZARD_CAPTIVE_PORTAL 0
 #define WIZARD_ENABLE_MDNS 0
 #define WIZARD_MDNS_NAME ""
+
+#define WIZARD_ENABLE_WIFI 0
+#ifndef WIZARD_WIFI_NAME  // Allow to set WIZARD_WIFI_NAME from build params
+#define WIZARD_WIFI_NAME "MyNet"
+#endif
+#ifndef WIZARD_WIFI_PASS  // Allow to set WIZARD_WIFI_PASS from build params
+#define WIZARD_WIFI_PASS "MyPass"
+#endif
+#define WIZARD_ENABLE_WIFI_AP 0
+#define WIZARD_WIFI_AP_NAME "MyAp"
+#define WIZARD_WIFI_AP_PASS "MyApPass"
 
 #define WIZARD_ENABLE_MODBUS 0
 #define WIZARD_MODBUS_PORT 502
@@ -65,6 +78,18 @@ void mongoose_set_sntp_handler(void (*fn)(uint64_t epoch_ms));
 void mongoose_set_sntp_server(const char *url);
 
 void mongoose_set_auth_handler(int (*fn)(const char *user, const char *pass));
+
+void mongoose_add_custom_handler(const char *url_pattern, mg_event_handler_t,
+                                 int read_level, int write_level);
+
+struct mongoose_wifi_handlers {
+  void (*on_connect_fn)(struct mg_tcpip_if *);
+  void (*on_disconnect_fn)(struct mg_tcpip_if *);
+  void (*on_connect_error_fn)(struct mg_tcpip_if *);
+  void (*on_scan_result_fn)(struct mg_tcpip_if *, struct mg_wifi_scan_bss_data *);
+  void (*on_scan_end_fn)(struct mg_tcpip_if *);
+};
+void mongoose_set_wifi_handlers(struct mongoose_wifi_handlers *);
 
 #if WIZARD_ENABLE_MQTT
 void glue_lock_init(void);  // Initialise global Mongoose mutex
